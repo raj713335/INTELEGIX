@@ -4,6 +4,7 @@ import tkinter.ttk as ttk
 from tkinter import messagebox, Frame
 from PIL import Image, ImageTk
 import cv2
+import os
 import sys
 
 
@@ -21,16 +22,16 @@ def photo_viewer():
 
             head_title="CLASS ENVIRONMENT"
 
-            load = cv2.imread('Data/Images/Background/background1.png', 1)
-            cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
-            load = Image.fromarray(cv2imagex1)
-            regx = tk.Tk()
-            load = load.resize((int(regx.winfo_screenwidth()), int(regx.winfo_screenheight())), Image.ANTIALIAS)
+            listx = []
 
-            render = ImageTk.PhotoImage(load)
-            img = tk.Label(image=render)
-            img.image = render
-            img.place(x=-1, y=0)
+            for dirname, _, filenames in os.walk('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES'):
+                for filename in filenames:
+                    print('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES' + '/' + filename)
+                    listx.append(str('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES' + '/' + filename))
+
+
+
+
 
 
             load = cv2.imread('Data/Images/Background/logo.png', 1)
@@ -47,6 +48,45 @@ def photo_viewer():
             img1.image = render
 
             img1.place(x=1296, y=700)
+
+
+
+
+            iter=-1
+
+            def image_viewer(iter):
+
+                iter+=1
+
+                print(iter)
+
+                load = cv2.imread(listx[iter], 1)
+                cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
+                load = Image.fromarray(cv2imagex1)
+                regx = tk.Tk()
+                load = load.resize((int(regx.winfo_screenwidth())-140, int(regx.winfo_screenheight())-70), Image.ANTIALIAS)
+
+                render = ImageTk.PhotoImage(load)
+                img = tk.Label(image=render)
+                img.image = render
+                img.place(x=70, y=70)
+
+                regx.destroy()
+
+
+                try:
+                    self.forward_right.destroy()
+                    self.forward_right = ttk.Button(win, text=">", style='my.TButton', width=20, command=image_viewer(iter+1))
+                    self.forward_right.place(x=1296, y=70, width=74, height=632)
+                except:
+                    pass
+
+                return iter
+
+            image_viewer(iter)
+
+            def forward():
+                iter=image_viewer(iter)
 
 
 
@@ -75,7 +115,7 @@ def photo_viewer():
             self.back_left = ttk.Button(win, text="<",style='my.TButton', width=20)
             self.back_left.place(x=0, y=70, width=74, height=632)
 
-            self.forward_right = ttk.Button(win, text=">",style='my.TButton', width=20)
+            self.forward_right = ttk.Button(win, text=">",style='my.TButton', width=20,command=image_viewer(0))
             self.forward_right.place(x=1296, y=70, width=74, height=632)
 
 
@@ -87,7 +127,7 @@ def photo_viewer():
 
 
 
-            regx.destroy()
+
 
         def quit(self):
             window_user_login3.destroy()

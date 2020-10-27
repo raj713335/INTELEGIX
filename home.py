@@ -5,6 +5,7 @@ from tkinter import filedialog
 from tkinter import messagebox, Frame
 from PIL import Image, ImageTk
 import cv2
+import os
 import configparser
 import sys
 
