@@ -3,3 +3,4 @@ Pillow==8.0.1
 opencv-python==4.4.0.44
 requests==2.24.0
 PyAutoGUI==0.9.52
+configparser==5.0.1
