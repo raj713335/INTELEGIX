@@ -194,30 +194,32 @@ def main():
             # OPTION SELECT POP UP CREATION
 
             def __init__(self, win):
-                load = cv2.imread('Data/Images/Background/home_background.png', 1)
+                load = cv2.imread('Data/Images/Background/background.jpg', 1)
                 cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
                 load = Image.fromarray(cv2imagex1)
-                load = load.resize((int(800), int(450)), Image.ANTIALIAS)
+                regx=tk.Tk()
+                load = load.resize(((regx.winfo_screenwidth()), int(regx.winfo_screenheight())), Image.ANTIALIAS)
+                regx.destroy()
                 render = ImageTk.PhotoImage(load)
                 img = tk.Label(image=render)
                 img.image = render
                 img.place(x=-1, y=0)
 
-                load = cv2.imread('Data/Images/Background/eyexa.png', 1)
+                load = cv2.imread('Data/Images/Background/logo.png', 1)
                 cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
                 load = Image.fromarray(cv2imagex1)
-                load = load.resize((int(150), int(80)), Image.ANTIALIAS)
+                load = load.resize((int(250), int(160)), Image.ANTIALIAS)
                 render = ImageTk.PhotoImage(load)
                 img = tk.Label(image=render)
                 img.image = render
-                img.place(x=600, y=0)
+                img.place(x=1115, y=0)
 
 
 
 
-                # self.b3 = ttk.Button(win, text='START', width=20)
-                # self.b3.place(x=15, y=200, width=200, height=50)
-                #
+                self.b3 = ttk.Button(win, text='START', width=20)
+                self.b3.place(x=15, y=200, width=200, height=50)
+
                 # button_over_ride = ttk.Button(win, height=1, width=1, bg='white', bd=0)
                 # button_over_ride.place(x=0, y=1)
 
@@ -225,12 +227,12 @@ def main():
 
         window_user_login1 = tk.Tk()
         window_user_login1.config(background='#EFEFEF')
-        window_user_login1.attributes('-alpha', 0.97)
+        window_user_login1.attributes('-fullscreen', True)
 
-        user_login_window = Store_DATA_IN_INI(display)
+        user_login_window = Store_DATA_IN_INI(window_user_login1)
         window_user_login1.iconbitmap(default='DATA/Images/icons/favicon.ico')
-        window_user_login1.title('Admin Login')
-        window_user_login1.geometry("600x450")
+        window_user_login1.title('INTELEGIX')
+
 
 
 
