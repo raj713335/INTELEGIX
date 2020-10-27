@@ -111,8 +111,8 @@ button_forward = Button(root, text="Forward",
                         command=lambda: forward(1))
 
 # grid function is for placing the buttons in the frame
-button_back.grid(row=5, column=0)
-button_exit.grid(row=5, column=1)
-button_forward.grid(row=5, column=2)
+button_back.place(x=25, y=10)
+button_exit.place(x=55, y=70)
+button_forward.place(x=5, y=140)
 
 root.mainloop()
