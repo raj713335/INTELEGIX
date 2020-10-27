@@ -8,13 +8,6 @@ import sys
 
 
 
-class quitButton(ttk.Button):
-    def __init__(self, parent):
-        ttk.Button.__init__(self, parent)
-        self['text'] = 'Good Bye'
-        # Command to close the window (the destory method)
-        self['command'] = parent.destroy
-        self.pack(side='bottom')
 
 
 class CreateToolTip(object):
