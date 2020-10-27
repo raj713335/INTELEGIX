@@ -97,7 +97,7 @@ def main():
         rootx.after(500, lambda: rootx.destroy())  # Destroy the widget after 0.5 seconds
         labelx.mainloop()
 
-    for i in range(0, 3):
+    for i in range(0, 1):
         loading()
 
     def user_login_over_ride():
@@ -197,8 +197,8 @@ def main():
                 cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
                 load = Image.fromarray(cv2imagex1)
                 regx=tk.Tk()
-                load = load.resize(((regx.winfo_screenwidth()), int(regx.winfo_screenheight())), Image.ANTIALIAS)
-                regx.destroy()
+                load = load.resize((int(regx.winfo_screenwidth()), int(regx.winfo_screenheight())), Image.ANTIALIAS)
+
                 render = ImageTk.PhotoImage(load)
                 img = tk.Label(image=render)
                 img.image = render
@@ -214,28 +214,46 @@ def main():
                 img.place(x=1115, y=0)
 
 
+                self.b0 = tk.Button(win,
+                bg='#f7421e',
+                fg='#b7f731',
+                relief='flat',
+                width=20)
+                self.b0.place(x=0, y=0, width=70, height=70)
+
+                self.b0b = tk.Button(win,
+                                    bg='#33ff00',
+                                    fg='#b7f731',
+                                    relief='flat',
+                                    width=20)
+                self.b0b.place(x=1300, y=700, width=70, height=70)
 
 
-                self.b1 = ttk.Button(win, text='CLASS', width=20)
-                self.b1.place(x=15, y=280, width=170, height=50)
 
-                self.b2 = ttk.Button(win, text='START', width=20)
-                self.b2.place(x=15, y=200, width=200, height=50)
+                self.b1 = ttk.Button(win, text='Class Enviroment', width=20)
+                self.b1.place(x=15, y=275, width=175, height=70)
 
-                self.b3 = ttk.Button(win, text='START', width=20)
-                self.b3.place(x=15, y=200, width=200, height=50)
+                self.b2 = ttk.Button(win, text='Hostel Envioment', width=20)
+                self.b2.place(x=90, y=490, width=250, height=70)
 
-                self.b4 = ttk.Button(win, text='START', width=20)
-                self.b4.place(x=15, y=200, width=200, height=50)
+                self.b3 = ttk.Button(win, text='Online Assignment', width=20)
+                self.b3.place(x=300, y=660, width=250, height=70)
 
-                self.b5 = ttk.Button(win, text='START', width=20)
-                self.b5.place(x=15, y=200, width=200, height=50)
+                self.b4 = ttk.Button(win, text='School Bus', width=20)
+                self.b4.place(x=1180, y=495, width=170, height=70)
+
+                self.b5 = ttk.Button(win, text='Corridor Enviroment', width=20)
+                self.b5.place(x=1050, y=380, width=200, height=70)
 
                 self.b6 = ttk.Button(win, text='START', width=20)
-                self.b6.place(x=15, y=200, width=200, height=50)
+                self.b6.place(x=1000, y=170, width=200, height=70)
+
+
 
                 # button_over_ride = ttk.Button(win, height=1, width=1, bg='white', bd=0)
                 # button_over_ride.place(x=0, y=1)
+
+                regx.destroy()
 
 
 
@@ -246,12 +264,13 @@ def main():
         user_login_window = Store_DATA_IN_INI(window_user_login1)
         window_user_login1.iconbitmap(default='DATA/Images/icons/favicon.ico')
         window_user_login1.title('INTELEGIX')
+        window_user_login1.mainloop()
 
 
 
 
-
-    user_login_over_ride()
+    display()
+    #user_login_over_ride()
 
 
 
