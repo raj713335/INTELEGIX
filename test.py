@@ -9,12 +9,17 @@ import sys
 
 
 
-def display():
+def second():
+
+
     class Store_DATA_IN_INI():
 
         # OPTION SELECT POP UP CREATION
 
         def __init__(self, win):
+
+
+            head_title="CLASS ENVIRONMENT"
 
             load = cv2.imread('Data/Images/Background/background1.png', 1)
             cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
@@ -83,6 +88,12 @@ def display():
             # button_over_ride = ttk.Button(win, height=1, width=1, bg='white', bd=0)
             # button_over_ride.place(x=0, y=1)
 
+            s = ttk.Style()
+            s.configure('my.TButton', font=('Aerial', 25, 'bold'))
+
+            self.h0 = ttk.Button(win, text=head_title,style='my.TButton', width=20)
+            self.h0.place(x=70, y=-1, width=1232, height=72)
+
             regx.destroy()
 
     window_user_login1 = tk.Tk()
@@ -94,4 +105,4 @@ def display():
     window_user_login1.title('INTELEGIX')
     window_user_login1.mainloop()
 
-display()
+second()
