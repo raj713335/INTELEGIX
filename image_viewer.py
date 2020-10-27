@@ -1,118 +1,200 @@
-# importing the tkinter module and PIL
-# that is pillow module
-from tkinter import *
-from PIL import ImageTk, Image
+import re
+import tkinter as tk
+import tkinter.ttk as ttk
+from tkinter import messagebox, Frame
+from PIL import Image, ImageTk
+import cv2
+import os
+import sys
+
+
+
+
+def photo_viewer():
 
 
 
 
 
-def forward(img_no):
-    # GLobal variable so that we can have
-    # access and change the variable
-    # whenever needed
-    global label
-    global button_forward
-    global button_back
-    global button_exit
-    label.grid_forget()
+    class Store_DATA_IN_INI():
 
-    # This is for clearing the screen so that
-    # our next image can pop up
-    label = Label(image=List_images[img_no - 1])
+        # OPTION SELECT POP UP CREATION
 
-    # as the list starts from 0 so we are
-    # subtracting one
-    label.grid(row=1, column=0, columnspan=3)
-    button_for = Button(root, text="forward",
-                        command=lambda: forward(img_no + 1))
-
-    # img_no+1 as we want the next image to pop up
-    if img_no == 4:
-        button_forward = Button(root, text="Forward",
-                                state=DISABLED)
-
-        # img_no-1 as we want previous image when we click
-    # back button
-    button_back = Button(root, text="Back",
-                         command=lambda: back(img_no - 1))
-
-    # Placing the button in new grid
-    button_back.grid(row=5, column=0)
-    button_exit.grid(row=5, column=1)
-    button_for.grid(row=5, column=2)
+        def __init__(self, win):
 
 
-def back(img_no):
-    # We willl have global variable to access these
-    # variable and change whenever needed
-    global label
-    global button_forward
-    global button_back
-    global button_exit
-    label.grid_forget()
+            head_title="CLASS ENVIRONMENT"
 
-    # for clearing the image for new image to pop up
-    label = Label(image=List_images[img_no - 1])
-    label.grid(row=1, column=0, columnspan=3)
-    button_forward = Button(root, text="forward",
-                            command=lambda: forward(img_no + 1))
-    button_back = Button(root, text="Back",
-                         command=lambda: back(img_no - 1))
-    print(img_no)
+            listx = []
 
-    # whenever the first image will be there we will
-    # have the back button disabled
-    if img_no == 1:
-        button_back = Button(root, Text="Back", state=DISABLED)
+            iter = 0
 
-    label.grid(row=1, column=0, columnspan=3)
-    button_back.grid(row=5, column=0)
-    button_exit.grid(row=5, column=1)
-    button_forward.grid(row=5, column=2)
+            for dirname, _, filenames in os.walk('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES'):
+                for filename in filenames:
+                    print('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES' + '/' + filename)
+                    listx.append(str('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES' + '/' + filename))
 
 
-# Calling the Tk (The intial constructor of tkinter)
-root = Tk()
 
-# We will make the title of our app as Image Viewer
-root.title("Image Viewer")
 
-# The geometry of the box which will be displayed
-# on the screen
-root.geometry("400x400")
 
-# Adding the images using the pillow module which
-# has a class ImageTk We can directly add the
-# photos in the tkinter folder or we have to
-# give a proper path for the images
-image_no_1 = ImageTk.PhotoImage(Image.open("OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES/screenshot1.png"))
-image_no_2 = ImageTk.PhotoImage(Image.open("OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES/logo.png"))
-image_no_3 = ImageTk.PhotoImage(Image.open("OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES/screenshot1.png"))
-image_no_4 = ImageTk.PhotoImage(Image.open("OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES/screenshot1.png"))
 
-# List of the images so that we traverse the list
-List_images = [image_no_1, image_no_2, image_no_3, image_no_4]
+            load = cv2.imread('Data/Images/Background/logo.png', 1)
+            cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
+            load = Image.fromarray(cv2imagex1)
+            load = load.resize((int(70), int(70)), Image.ANTIALIAS)
+            render = ImageTk.PhotoImage(load)
+            img = tk.Label(image=render)
+            img.image = render
+            img.place(x=0, y=700)
 
-label = Label(image=image_no_1)
 
-# We have to show the the box so this below line is needed
-label.grid(row=1, column=0, columnspan=3)
+            img1 = tk.Label(image=render)
+            img1.image = render
 
-# We will have three button back ,forward and exit
-button_back = Button(root, text="Back", command=back,
-                     state=DISABLED)
+            img1.place(x=1296, y=700)
 
-# root.quit for closing the app
-button_exit = Button(root, text="Exit",
-                     command=root.quit)
 
-button_forward = Button(root, text="Forward",
-                        command=lambda: forward(1))
 
-# grid function is for placing the buttons in the frame
-button_back.place(x=25, y=10)
-button_exit.place(x=55, y=70)
-button_forward.place(x=5, y=140)
 
-root.mainloop()
+
+
+            def image_viewer(iter,key=0):
+
+                print("ft",iter)
+
+
+
+                if iter>len(listx)-1:
+                    iter=len(listx)-1
+
+                if iter<=-1:
+                    iter=0
+
+
+                print(iter)
+
+                try:
+                    img.destroy()
+                except:
+                    pass
+
+                load = cv2.imread(listx[iter], 1)
+                cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
+                load = Image.fromarray(cv2imagex1)
+                regx = tk.Tk()
+                load = load.resize((int(regx.winfo_screenwidth())-140, int(regx.winfo_screenheight())-70), Image.ANTIALIAS)
+
+                render = ImageTk.PhotoImage(load)
+                img = tk.Label(image=render)
+                img.image = render
+                img.place(x=70, y=70)
+
+                regx.destroy()
+
+                if key==2:
+
+
+                    try:
+                        self.forward_right.destroy()
+                        self.forward_right = ttk.Button(win, text=">", style='my.TButton', width=20,
+                                                        command=lambda: image_viewer(iter + 1,key=2))
+                        self.forward_right.place(x=1296, y=70, width=74, height=632)
+                    except:
+                        pass
+
+
+                    try:
+                        self.back_left.destroy()
+
+                        self.back_left = ttk.Button(win, text="<", style='my.TButton', width=20,
+                                                    command=lambda: image_viewer(iter - 1, key=1))
+                        self.back_left.place(x=0, y=70, width=74, height=632)
+                    except:
+                        pass
+
+
+                if key==1:
+                    try:
+                        self.back_left.destroy()
+
+                        self.back_left = ttk.Button(win, text="<", style='my.TButton', width=20,
+                                                    command=lambda: image_viewer(iter - 1, key=1))
+                        self.back_left.place(x=0, y=70, width=74, height=632)
+                    except:
+                        pass
+
+                    try:
+                        self.forward_right.destroy()
+                        self.forward_right = ttk.Button(win, text=">", style='my.TButton', width=20,
+                                                        command=lambda: image_viewer(iter + 1, key=2))
+                        self.forward_right.place(x=1296, y=70, width=74, height=632)
+                    except:
+                        pass
+
+                return iter
+
+
+
+
+
+
+            image_viewer(iter)
+
+
+
+
+
+
+
+
+
+
+            self.b0 = tk.Button(win,
+                                bg='#33ff00',
+                                fg='#b7f731',
+                                relief='flat',
+                                width=20)
+            self.b0.place(x=0, y=0, width=70, height=70)
+
+            self.b0r = tk.Button(win,
+                                bg='#f7421e',
+                                fg='#b7f731',
+                                relief='flat',
+                                width=20,command=self.quit)
+            self.b0r.place(x=1296, y=0, width=70, height=70)
+
+            s = ttk.Style()
+            s.configure('my.TButton', font=('Aerial', 25, 'bold'))
+
+            self.back_left = ttk.Button(win, text="<",style='my.TButton', width=20,command=lambda :image_viewer(iter-1,key=1))
+            self.back_left.place(x=0, y=70, width=74, height=632)
+
+            self.forward_right = ttk.Button(win, text=">",style='my.TButton', width=20,command=lambda :image_viewer(iter+1,key=2))
+            self.forward_right.place(x=1296, y=70, width=74, height=632)
+
+
+
+
+
+            self.h0 = ttk.Button(win, text=head_title,style='my.TButton', width=20)
+            self.h0.place(x=70, y=-1, width=1226, height=72)
+
+
+
+
+
+        def quit(self):
+            window_user_login3.destroy()
+            exit(0)
+
+    window_user_login3 = tk.Tk()
+    window_user_login3.config(background='#EFEFEF')
+    window_user_login3.attributes('-fullscreen', True)
+
+    user_login_window = Store_DATA_IN_INI(window_user_login3)
+    window_user_login3.iconbitmap(default='DATA/Images/icons/favicon.ico')
+    window_user_login3.title('INTELEGIX')
+    window_user_login3.mainloop()
+
+photo_viewer()
