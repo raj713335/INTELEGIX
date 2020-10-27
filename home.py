@@ -216,8 +216,23 @@ def main():
 
 
 
+                self.b1 = ttk.Button(win, text='CLASS', width=20)
+                self.b1.place(x=15, y=280, width=170, height=50)
+
+                self.b2 = ttk.Button(win, text='START', width=20)
+                self.b2.place(x=15, y=200, width=200, height=50)
+
                 self.b3 = ttk.Button(win, text='START', width=20)
                 self.b3.place(x=15, y=200, width=200, height=50)
+
+                self.b4 = ttk.Button(win, text='START', width=20)
+                self.b4.place(x=15, y=200, width=200, height=50)
+
+                self.b5 = ttk.Button(win, text='START', width=20)
+                self.b5.place(x=15, y=200, width=200, height=50)
+
+                self.b6 = ttk.Button(win, text='START', width=20)
+                self.b6.place(x=15, y=200, width=200, height=50)
 
                 # button_over_ride = ttk.Button(win, height=1, width=1, bg='white', bd=0)
                 # button_over_ride.place(x=0, y=1)
