@@ -154,7 +154,7 @@ def main():
                     user_name = str(self.txtfld1.get())
                     window_user_login.destroy()
 
-                    display(user_key=user_name)
+                    display()
 
 
 
@@ -182,61 +182,60 @@ def main():
         window_user_login.mainloop()
 
 
+
+
+    def display():
+
+
+
+
+        class Store_DATA_IN_INI():
+
+            # OPTION SELECT POP UP CREATION
+
+            def __init__(self, win):
+                load = cv2.imread('Data/Images/Background/home_background.png', 1)
+                cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
+                load = Image.fromarray(cv2imagex1)
+                load = load.resize((int(800), int(450)), Image.ANTIALIAS)
+                render = ImageTk.PhotoImage(load)
+                img = tk.Label(image=render)
+                img.image = render
+                img.place(x=-1, y=0)
+
+                load = cv2.imread('Data/Images/Background/eyexa.png', 1)
+                cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
+                load = Image.fromarray(cv2imagex1)
+                load = load.resize((int(150), int(80)), Image.ANTIALIAS)
+                render = ImageTk.PhotoImage(load)
+                img = tk.Label(image=render)
+                img.image = render
+                img.place(x=600, y=0)
+
+
+
+
+                # self.b3 = ttk.Button(win, text='START', width=20)
+                # self.b3.place(x=15, y=200, width=200, height=50)
+                #
+                # button_over_ride = ttk.Button(win, height=1, width=1, bg='white', bd=0)
+                # button_over_ride.place(x=0, y=1)
+
+
+
+        window_user_login1 = tk.Tk()
+        window_user_login1.config(background='#EFEFEF')
+        window_user_login1.attributes('-alpha', 0.97)
+
+        user_login_window = Store_DATA_IN_INI(display)
+        window_user_login1.iconbitmap(default='DATA/Images/icons/favicon.ico')
+        window_user_login1.title('Admin Login')
+        window_user_login1.geometry("600x450")
+
+
+
+
     user_login_over_ride()
-
-    # def mainx():
-    #
-    #
-    #
-    #
-    #     class Store_DATA_IN_INI():
-    #
-    #         # OPTION SELECT POP UP CREATION
-    #
-    #         def __init__(self, win):
-    #             load = cv2.imread('IMAGES/home_background.png', 1)
-    #             cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
-    #             load = Image.fromarray(cv2imagex1)
-    #             load = load.resize((int(800), int(450)), Image.ANTIALIAS)
-    #             render = ImageTk.PhotoImage(load)
-    #             img = tk.Label(image=render)
-    #             img.image = render
-    #             img.place(x=-1, y=0)
-    #
-    #             load = cv2.imread('IMAGES/eyexa.png', 1)
-    #             cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
-    #             load = Image.fromarray(cv2imagex1)
-    #             load = load.resize((int(150), int(80)), Image.ANTIALIAS)
-    #             render = ImageTk.PhotoImage(load)
-    #             img = tk.Label(image=render)
-    #             img.image = render
-    #             img.place(x=600, y=0)
-    #
-    #             def user_video():
-    #                 window.destroy()
-    #                 display()
-    #
-    #             self.b3 = ttk.Button(win, text='START', width=20, command=self.store_INI)
-    #             self.b3.place(x=15, y=200, width=200, height=50)
-    #
-    #             button_over_ride = Button(win, height=1, width=1, bg='white', bd=0, command=user_video)
-    #             button_over_ride.place(x=0, y=1)
-    #
-    #         def store_INI(self):
-    #             window.destroy()
-    #             mainc()
-    #
-    #     window = Tk()
-    #     window.iconbitmap(default='IMAGES/home.ico')
-    #     option_window = Store_DATA_IN_INI(window)
-    #     window.config(background='white')
-    #     window.attributes('-alpha', 0.9)
-    #     window.title('EYEXA ' + version)
-    #     window.geometry("750x450")
-    #     window.mainloop()
-
-
-
 
 
 
