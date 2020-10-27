@@ -43,6 +43,12 @@ def photo_viewer():
             img.place(x=0, y=700)
 
 
+            img1 = tk.Label(image=render)
+            img1.image = render
+
+            img1.place(x=1296, y=700)
+
+
 
 
 
@@ -61,15 +67,23 @@ def photo_viewer():
                                 fg='#b7f731',
                                 relief='flat',
                                 width=20,command=self.quit)
-            self.b0r.place(x=1300, y=0, width=70, height=70)
-
-
+            self.b0r.place(x=1296, y=0, width=70, height=70)
 
             s = ttk.Style()
             s.configure('my.TButton', font=('Aerial', 25, 'bold'))
 
+            self.back_left = ttk.Button(win, text="<",style='my.TButton', width=20)
+            self.back_left.place(x=0, y=70, width=74, height=632)
+
+            self.forward_right = ttk.Button(win, text=">",style='my.TButton', width=20)
+            self.forward_right.place(x=1296, y=70, width=74, height=632)
+
+
+
+
+
             self.h0 = ttk.Button(win, text=head_title,style='my.TButton', width=20)
-            self.h0.place(x=70, y=-1, width=1232, height=72)
+            self.h0.place(x=70, y=-1, width=1226, height=72)
 
 
 
