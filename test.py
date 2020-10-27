@@ -13,6 +13,9 @@ import sys
 def photo_viewer():
 
 
+
+
+
     class Store_DATA_IN_INI():
 
         # OPTION SELECT POP UP CREATION
@@ -23,6 +26,8 @@ def photo_viewer():
             head_title="CLASS ENVIRONMENT"
 
             listx = []
+
+            iter = 0
 
             for dirname, _, filenames in os.walk('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES'):
                 for filename in filenames:
@@ -52,13 +57,27 @@ def photo_viewer():
 
 
 
-            iter=-1
 
-            def image_viewer(iter):
 
-                iter+=1
+            def image_viewer(iter,key=0):
+
+                print("ft",iter)
+
+
+
+                if iter>len(listx)-1:
+                    iter=len(listx)-1
+
+                if iter<=-1:
+                    iter=0
+
 
                 print(iter)
+
+                try:
+                    img.destroy()
+                except:
+                    pass
 
                 load = cv2.imread(listx[iter], 1)
                 cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
@@ -73,20 +92,56 @@ def photo_viewer():
 
                 regx.destroy()
 
+                if key==2:
 
-                try:
-                    self.forward_right.destroy()
-                    self.forward_right = ttk.Button(win, text=">", style='my.TButton', width=20, command=image_viewer(iter+1))
-                    self.forward_right.place(x=1296, y=70, width=74, height=632)
-                except:
-                    pass
+
+                    try:
+                        self.forward_right.destroy()
+                        self.forward_right = ttk.Button(win, text=">", style='my.TButton', width=20,
+                                                        command=lambda: image_viewer(iter + 1,key=2))
+                        self.forward_right.place(x=1296, y=70, width=74, height=632)
+                    except:
+                        pass
+
+
+                    try:
+                        self.back_left.destroy()
+
+                        self.back_left = ttk.Button(win, text="<", style='my.TButton', width=20,
+                                                    command=lambda: image_viewer(iter - 1, key=1))
+                        self.back_left.place(x=0, y=70, width=74, height=632)
+                    except:
+                        pass
+
+
+                if key==1:
+                    try:
+                        self.back_left.destroy()
+
+                        self.back_left = ttk.Button(win, text="<", style='my.TButton', width=20,
+                                                    command=lambda: image_viewer(iter - 1, key=1))
+                        self.back_left.place(x=0, y=70, width=74, height=632)
+                    except:
+                        pass
+
+                    try:
+                        self.forward_right.destroy()
+                        self.forward_right = ttk.Button(win, text=">", style='my.TButton', width=20,
+                                                        command=lambda: image_viewer(iter + 1, key=2))
+                        self.forward_right.place(x=1296, y=70, width=74, height=632)
+                    except:
+                        pass
 
                 return iter
 
+
+
+
+
+
             image_viewer(iter)
 
-            def forward():
-                iter=image_viewer(iter)
+
 
 
 
@@ -112,10 +167,10 @@ def photo_viewer():
             s = ttk.Style()
             s.configure('my.TButton', font=('Aerial', 25, 'bold'))
 
-            self.back_left = ttk.Button(win, text="<",style='my.TButton', width=20)
+            self.back_left = ttk.Button(win, text="<",style='my.TButton', width=20,command=lambda :image_viewer(iter-1,key=1))
             self.back_left.place(x=0, y=70, width=74, height=632)
 
-            self.forward_right = ttk.Button(win, text=">",style='my.TButton', width=20,command=image_viewer(0))
+            self.forward_right = ttk.Button(win, text=">",style='my.TButton', width=20,command=lambda :image_viewer(iter+1,key=2))
             self.forward_right.place(x=1296, y=70, width=74, height=632)
 
 
