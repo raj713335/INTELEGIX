@@ -9,7 +9,7 @@ import sys
 
 
 
-def second():
+def photo_viewer():
 
 
     class Store_DATA_IN_INI():
@@ -32,14 +32,17 @@ def second():
             img.image = render
             img.place(x=-1, y=0)
 
+
             load = cv2.imread('Data/Images/Background/logo.png', 1)
             cv2imagex1 = cv2.cvtColor(load, cv2.COLOR_BGR2RGBA)
             load = Image.fromarray(cv2imagex1)
-            load = load.resize((int(250), int(160)), Image.ANTIALIAS)
+            load = load.resize((int(70), int(70)), Image.ANTIALIAS)
             render = ImageTk.PhotoImage(load)
             img = tk.Label(image=render)
             img.image = render
-            img.place(x=0, y=610)
+            img.place(x=0, y=700)
+
+
 
 
 
@@ -57,36 +60,10 @@ def second():
                                 bg='#f7421e',
                                 fg='#b7f731',
                                 relief='flat',
-                                width=20)
+                                width=20,command=self.quit)
             self.b0r.place(x=1300, y=0, width=70, height=70)
 
-            # self.b0b = tk.Button(win,
-            #                      bg='#33ff00',
-            #                      fg='#b7f731',
-            #                      relief='flat',
-            #                      width=20)
-            # self.b0b.place(x=1300, y=700, width=70, height=70)
 
-            self.b1 = ttk.Button(win, text='LIVE', width=20)
-            self.b1.place(x=385, y=225, width=250, height=70)
-
-            self.b2 = ttk.Button(win, text='UPLOAD', width=20)
-            self.b2.place(x=385, y=325, width=250, height=70)
-
-            self.b3 = ttk.Button(win, text='BROWSE', width=20)
-            self.b3.place(x=385, y=425, width=250, height=70)
-
-            # self.b4 = ttk.Button(win, text='School Bus', width=20)
-            # self.b4.place(x=1180, y=495, width=170, height=70)
-            #
-            # self.b5 = ttk.Button(win, text='Corridor Enviroment', width=20)
-            # self.b5.place(x=1050, y=380, width=200, height=70)
-            #
-            # self.b6 = ttk.Button(win, text='START', width=20)
-            # self.b6.place(x=1000, y=170, width=200, height=70)
-
-            # button_over_ride = ttk.Button(win, height=1, width=1, bg='white', bd=0)
-            # button_over_ride.place(x=0, y=1)
 
             s = ttk.Style()
             s.configure('my.TButton', font=('Aerial', 25, 'bold'))
@@ -94,15 +71,21 @@ def second():
             self.h0 = ttk.Button(win, text=head_title,style='my.TButton', width=20)
             self.h0.place(x=70, y=-1, width=1232, height=72)
 
+
+
             regx.destroy()
 
-    window_user_login1 = tk.Tk()
-    window_user_login1.config(background='#EFEFEF')
-    window_user_login1.attributes('-fullscreen', True)
+        def quit(self):
+            window_user_login3.destroy()
+            exit(0)
 
-    user_login_window = Store_DATA_IN_INI(window_user_login1)
-    window_user_login1.iconbitmap(default='DATA/Images/icons/favicon.ico')
-    window_user_login1.title('INTELEGIX')
-    window_user_login1.mainloop()
+    window_user_login3 = tk.Tk()
+    window_user_login3.config(background='#EFEFEF')
+    window_user_login3.attributes('-fullscreen', True)
 
-second()
+    user_login_window = Store_DATA_IN_INI(window_user_login3)
+    window_user_login3.iconbitmap(default='DATA/Images/icons/favicon.ico')
+    window_user_login3.title('INTELEGIX')
+    window_user_login3.mainloop()
+
+photo_viewer()
