@@ -1,6 +1,7 @@
 import re
 import tkinter as tk
 import tkinter.ttk as ttk
+from tkinter import filedialog
 from tkinter import messagebox, Frame
 from PIL import Image, ImageTk
 import cv2
@@ -303,6 +304,11 @@ def main():
         window_user_login1.title('INTELEGIX')
         window_user_login1.mainloop()
 
+
+
+
+
+
     def second(user_key=str(0),job=str(0)):
 
         class Store_DATA_IN_INI():
@@ -354,13 +360,13 @@ def main():
                 # self.b0b.place(x=1300, y=700, width=70, height=70)
 
                 self.b1 = ttk.Button(win, text='LIVE', width=20)
-                self.b1.place(x=385, y=225, width=250, height=70)
+                self.b1.place(x=285, y=225, width=450, height=70)
 
-                self.b2 = ttk.Button(win, text='UPLOAD', width=20)
-                self.b2.place(x=385, y=325, width=250, height=70)
+                self.b2 = ttk.Button(win, text='UPLOAD', width=20,command=self.browse_file)
+                self.b2.place(x=285, y=325, width=450, height=70)
 
-                self.b3 = ttk.Button(win, text='BROWSE', width=20)
-                self.b3.place(x=385, y=425, width=250, height=70)
+                self.b3 = ttk.Button(win, text='SAVED DATA', width=20)
+                self.b3.place(x=285, y=425, width=450, height=70)
 
                 # self.b4 = ttk.Button(win, text='School Bus', width=20)
                 # self.b4.place(x=1180, y=495, width=170, height=70)
@@ -381,6 +387,12 @@ def main():
                 self.h0.place(x=70, y=-1, width=1232, height=72)
 
                 regx.destroy()
+
+            def browse_file(self):
+                window_user_login2.filename = filedialog.askopenfilename(initialdir="/", title="Upload Video file",
+                                                                filetypes=(
+                                                                ("video files", "*.mp4"),("Video files", "*.mp4")))
+                print(window_user_login2.filename)
 
 
             def quit(self):
