@@ -396,6 +396,13 @@ def main():
                                                                 ("video files", "*.mp4"),("Video files", "*.mp4")))
                 print(window_user_login2.filename)
 
+                from ENGINES.AI_ONLINE_EXAM_PROCTORING import AI_PROCTORING
+
+                AI_PROCTORING.AI_PROCTORING(0)
+
+
+
+
 
             def quit(self):
                 window_user_login2.destroy()
