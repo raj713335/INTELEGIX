@@ -324,15 +324,17 @@ def AI_PROCTORING(path=0):
 
 
     def weights_download(out='models/yolov3.weights'):
-        _ = wget.download('https://pjreddie.com/media/files/yolov3.weights', out='models/yolov3.weights')
+        _ = wget.download('https://pjreddie.com/media/files/yolov3.weights', out='../../Data/Models/yolov3.weights')
 
 
     # weights_download() # to download weights
     yolo = YoloV3()
-    load_darknet_weights(yolo, 'models/yolov3.weights')
+    import os
+    print(os.getcwd())
+    load_darknet_weights(yolo, '../../Data/Models/yolov3.weights')
 
 
-    def get_landmark_model(saved_model='models/pose_model'):
+    def get_landmark_model(saved_model='../../Data/Models/pose_model'):
 
         model = keras.models.load_model(saved_model)
         return model
@@ -432,16 +434,16 @@ def AI_PROCTORING(path=0):
 
         if quantized:
             if modelFile == None:
-                modelFile = "models/opencv_face_detector_uint8.pb"
+                modelFile = "../../Data/Models/opencv_face_detector_uint8.pb"
             if configFile == None:
-                configFile = "models/opencv_face_detector.pbtxt"
+                configFile = "../../Data/Models/opencv_face_detector.pbtxt"
             model = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
 
         else:
             if modelFile == None:
-                modelFile = "models/res10_300x300_ssd_iter_140000.caffemodel"
+                modelFile = "../../Data/Models/res10_300x300_ssd_iter_140000.caffemodel"
             if configFile == None:
-                configFile = "models/deploy.prototxt"
+                configFile = "../../Data/Models/deploy.prototxt"
             model = cv2.dnn.readNetFromCaffe(configFile, modelFile)
         return model
 
@@ -668,7 +670,7 @@ def AI_PROCTORING(path=0):
             imgx = imgx.astype(np.float32)
             imgx = np.expand_dims(imgx, 0)
             imgx = imgx / 255
-            class_names = [c.strip() for c in open("models/classes.TXT").readlines()]
+            class_names = [c.strip() for c in open("../../Data/Models/classes.TXT").readlines()]
             boxes, scores, classes, nums = yolo(imgx)
             count = 0
             for i in range(nums[0]):
