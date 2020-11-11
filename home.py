@@ -367,7 +367,7 @@ def main():
                 self.b2 = ttk.Button(win, text='UPLOAD', width=20,command=self.browse_file)
                 self.b2.place(x=285, y=325, width=450, height=70)
 
-                self.b3 = ttk.Button(win, text='SAVED DATA', width=20)
+                self.b3 = ttk.Button(win, text='SAVED DATA', width=20,command=self.check_saved)
                 self.b3.place(x=285, y=425, width=450, height=70)
 
                 # self.b4 = ttk.Button(win, text='School Bus', width=20)
@@ -389,6 +389,9 @@ def main():
                 self.h0.place(x=70, y=-1, width=1232, height=72)
 
                 regx.destroy()
+
+            def check_saved(self):
+                photo_viewer(job)
 
             def browse_file(self):
                 window_user_login2.filename = filedialog.askopenfilename(initialdir="/", title="Upload Video file",
@@ -431,11 +434,15 @@ def main():
 
                 head_title = pathx
 
+                print(head_title)
+
                 listx = []
 
                 iter = 0
 
-                path='Data/Saved_Images/'+head_title
+                path='Data/Saved_Images/'+str(head_title).replace(" ","_")
+
+                print(path)
 
                 for dirname, _, filenames in os.walk(path):
                     for filename in filenames:
@@ -455,6 +462,12 @@ def main():
                 img1.image = render
 
                 img1.place(x=1296, y=700)
+
+                print(listx)
+
+                listx = sorted(listx, reverse=True)
+
+                print(listx)
 
                 def image_viewer(iter, key=0):
 

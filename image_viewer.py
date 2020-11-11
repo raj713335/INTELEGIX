@@ -13,9 +13,6 @@ import sys
 def photo_viewer():
 
 
-
-
-
     class Store_DATA_IN_INI():
 
         # OPTION SELECT POP UP CREATION
@@ -23,19 +20,20 @@ def photo_viewer():
         def __init__(self, win):
 
 
-            head_title="CLASS ENVIRONMENT"
+            head_title="EXAM ENVIRONMENT"
 
             listx = []
 
-            iter = 0
+            iter=0
 
-            for dirname, _, filenames in os.walk('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES'):
+            path = 'Data/Saved_Images/' + str(head_title).replace(" ", "_")
+
+            print(path)
+
+            for dirname, _, filenames in os.walk(path):
                 for filename in filenames:
-                    print('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES' + '/' + filename)
-                    listx.append(str('OUTPUT/REC/CLASS_ENVIRONMENT/IMAGES' + '/' + filename))
-
-
-
+                    print(path + '/' + filename)
+                    listx.append(str(path + '/' + filename))
 
 
 
@@ -53,6 +51,11 @@ def photo_viewer():
             img1.image = render
 
             img1.place(x=1296, y=700)
+
+            listx=sorted(listx,reverse=True)
+
+
+            print(listx)
 
 
 
