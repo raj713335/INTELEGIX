@@ -12,6 +12,7 @@ def AI_PROCTORING(path=0):
     import threading
     import time
     import configparser
+    from datetime import datetime
 
 
     from tensorflow.keras.regularizers import l2
@@ -853,6 +854,9 @@ def AI_PROCTORING(path=0):
 
             if total_person == 0:
                 telegx += 1
+                if telegx>2:
+                    now = datetime.now()
+                    cv2.imwrite(str("Data/Saved_Images/CLASS_ENVIRONMENT/")+str(now.strftime("%Y%m%d%H%M%S")+str(".jpg")),img)
                 if telegx > 5:
                     cv2.imwrite("Fraud.jpg", img)
                     threading.Thread(target=telegram).start()
