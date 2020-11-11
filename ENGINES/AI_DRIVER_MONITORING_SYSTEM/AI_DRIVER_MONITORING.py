@@ -97,7 +97,10 @@ def AI_DRIVER_MONITORING(path=0):
     # prototxtPath = 'Data/Models/face_detector/deploy.prototxt'
     # weightsPath = face_detector_caffe
     #faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
+    # Data/Models/yolov4.weights
     net=cv2.dnn.readNet("Data/Models/yolov4.weights","Data/Models/yolov4.cfg")
+
+
 
     classes=["Cigarette","Mobile"]
     # maskNet = load_model(model_store_dir)
@@ -178,7 +181,7 @@ def AI_DRIVER_MONITORING(path=0):
 
         tot_str = "Drowsy : " + str(drowsey_level)
         high_str = "Cigarette Detected : " + str(Cigarette)
-        low_str = "Mobile Phone Detected : " + str(Mobile)
+        low_str = "Cell Phone Detected : " + str(Mobile)
         safe_str = "Total Persons: " + str(0)
 
 
@@ -190,7 +193,7 @@ def AI_DRIVER_MONITORING(path=0):
 
         res = cv2.addWeighted(sub_img, 0.8, black_rect, 0.2, 1.0)
 
-        frame[H - 100:H, 0:260] = res
+        frame[H - 100:H+40, 0:260] = res
 
         cv2.putText(frame, tot_str, (10, H - 80),
                     font, 0.5*2, (255, 255, 255), 1)
