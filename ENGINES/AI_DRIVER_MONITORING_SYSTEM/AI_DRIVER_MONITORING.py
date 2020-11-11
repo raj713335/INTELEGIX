@@ -100,7 +100,8 @@ def AI_DRIVER_MONITORING(path=0):
     # Data/Models/yolov4.weights
     net=cv2.dnn.readNet("Data/Models/yolov4.weights","Data/Models/yolov4.cfg")
 
-
+    # labelsPath = "Data/Models/class.names"
+    # classes = open(labelsPath).read().strip().split("\n")
 
     classes=["Cigarette","Mobile"]
     # maskNet = load_model(model_store_dir)
@@ -302,6 +303,7 @@ def AI_DRIVER_MONITORING(path=0):
         cv2.namedWindow("Output", cv2.WINDOW_NORMAL)
         cv2.setWindowProperty("Output", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
         cv2.imshow("Output", frame)
+
         if(cv2.waitKey(1) & 0xFF == ord('q')):
             break
 

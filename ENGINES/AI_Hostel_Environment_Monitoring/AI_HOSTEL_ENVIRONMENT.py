@@ -197,6 +197,7 @@ def hostel_enviornment(path=0,start=0,end=0):
         cv2.namedWindow("Output", cv2.WINDOW_NORMAL)
         cv2.setWindowProperty("Output", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
         cv2.imshow("Output", frame)
+
         if(cv2.waitKey(1) & 0xFF == ord('q')):
             break
 

@@ -17,7 +17,7 @@ SpeechRecognition==3.8.1
 wget==3.2
 ```
 
-## MASK DETECTION RESULT
+## DETECTION RESULT
 
 <p align="center">
     <img src="SAMPLES/sample.gif", width="1200">
