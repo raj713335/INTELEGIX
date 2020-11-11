@@ -641,6 +641,8 @@ def AI_PROCTORING(path=0):
         size = img.shape
         (H, W) = img.shape[:2]
 
+        print(H,W)
+
         # 3D model points.
         model_points = np.array([
             (0.0, 0.0, 0.0),  # Nose tip
@@ -807,7 +809,7 @@ def AI_PROCTORING(path=0):
 
         cv2.putText(img, "INTELEGIX (Online Exam Proctoring System)", (80, 40),
                     font, 0.7, (255, 255, 255), 2)
-        cv2.rectangle(img, (20, 50), (H+140, 15), (255, 255, 255), 2)
+        cv2.rectangle(img, (20, 50), (W-50, 15), (255, 255, 255), 2)
         # cv2.putText(img, "RISK ANALYSIS", (30, 85),
         #             font, 0.5, (255, 255, 0), 1)
         # cv2.putText(img, "-- GREEN : SAFE", (H-100, 85),
@@ -835,6 +837,16 @@ def AI_PROCTORING(path=0):
                     font, 0.5, (0, 120, 255), 1)
         cv2.putText(img, safe_str, (10, H - 5),
                     font, 0.5, (0, 0, 150), 1)
+
+        now = datetime.now()
+        # cv2.imwrite(str("Data/Saved_Images/CLASS_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")), img)
+
+        # cv2.putText(img, str(now.strftime("%d-%m-%Y% %H:%M:%S")), (W-10, H - 5),
+        #             font, 0.5, (0, 0, 150), 1)
+        timex=str(now.strftime("%d/%m/%Y %H:%M:%S"))
+        cv2.putText(img, timex, (W - 200, H - 10),
+                    font, 0.5, (255, 255, 255), 1)
+
         #
         # # cv2.imshow("Social Distancing Detector", frame)
         #
@@ -856,7 +868,7 @@ def AI_PROCTORING(path=0):
                 telegx += 1
                 if telegx>2:
                     now = datetime.now()
-                    cv2.imwrite(str("Data/Saved_Images/CLASS_ENVIRONMENT/")+str(now.strftime("%Y%m%d%H%M%S")+str(".jpg")),img)
+                    cv2.imwrite(str("Data/Saved_Images/EXAM_ENVIRONMENT/")+str(now.strftime("%Y%m%d%H%M%S")+str(".jpg")),img)
                 if telegx > 5:
                     cv2.imwrite("Fraud.jpg", img)
                     threading.Thread(target=telegram).start()
@@ -876,7 +888,7 @@ def AI_PROCTORING(path=0):
             print(telegx)
             if telegx>2:
                 now = datetime.now()
-                cv2.imwrite(str("Data/Saved_Images/CLASS_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")), img)
+                cv2.imwrite(str("Data/Saved_Images/EXAM_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")), img)
             if telegx > 5:
                 cv2.imwrite("Fraud.jpg", img)
                 threading.Thread(target=telegram).start()
