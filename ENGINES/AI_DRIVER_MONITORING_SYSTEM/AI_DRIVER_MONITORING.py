@@ -291,7 +291,7 @@ def AI_DRIVER_MONITORING(path=0):
 
 
                 now = datetime.now()
-                cv2.imwrite(str("Data/Saved_Images/EXAM_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")), frame)
+                cv2.imwrite(str("Data/Saved_Images/BUS_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")), frame)
 
         drowsey_level = "False"
 
