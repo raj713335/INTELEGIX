@@ -183,7 +183,7 @@ def hostel_enviornment(path=0,start="20:00:00",end="06:00:00"):
 
         else:
             print(str(start)[0:2])
-            if str(start)[0:2] <= str(current_time)[0:2] and str(end)[0:2] <= str(current_time)[0:2]:
+            if str(start)[0:2] <= str(current_time)[0:2] or str(end)[0:2] >= str(current_time)[0:2]:
                 #image = draw_outputs(img, (boxes, scores, classes, nums), class_names, color=(0, 0, 255))
                 cv2.circle(frame, (25, 80), 10, (0, 0, 255), -1)
                 cv2.putText(frame, "Unrestricted Access", (50, 85),
