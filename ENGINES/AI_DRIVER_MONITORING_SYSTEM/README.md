@@ -52,7 +52,7 @@ To give landmarking on the eyelashes and if two lines on upper and lower eyelash
 
 It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and eyelashes.
 
-![when there is driver rules violation for sleeping ](SAMPLES/1.png)
+![when there is driver rules violation for sleeping ](SAMPLES/1.jpg)
 
 
 
@@ -62,7 +62,8 @@ It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and
 
 Tips to train a custom based yolov4 based object Detection model you can refer to https://blog.roboflow.com/train-a-tensorflow2-object-detection-model/
 
-![person counting and phone detection](SAMPLES/4.jpg)
+![person counting and phone detection](SAMPLES/2.jpg)
+![person counting and phone detection](SAMPLES/3.jpg)
 
 
 
