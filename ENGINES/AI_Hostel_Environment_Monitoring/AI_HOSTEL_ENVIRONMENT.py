@@ -1,18 +1,15 @@
-def hostel_enviornment(path=0,start=0,end=0):
+def hostel_enviornment(path=0,start="20:00:00",end="06:00:00"):
 
 
     #Import necessary libraries
-    import os
-    from scipy.spatial import distance
-    from imutils import face_utils
+
     import numpy as np
     import time
-    import dlib
     import cv2
     import requests
     import threading
     import configparser
-    import datetime
+    from datetime import datetime
 
 
     def telegram():
@@ -50,15 +47,15 @@ def hostel_enviornment(path=0,start=0,end=0):
 
 
 
-    net=cv2.dnn.readNet("Model/yolov3.weights","Model/yolov3.cfg")
+    net=cv2.dnn.readNet("Data/Models/yolov3.weights","Data/Models/yolov3.cfg")
 
-    labelsPath = "Model/class.names"
+    labelsPath = "Data/Models/class.names"
     classes = open(labelsPath).read().strip().split("\n")
 
 
 
 
-    video_capture = cv2.VideoCapture(0)
+    video_capture = cv2.VideoCapture(path)
 
 
 
@@ -78,11 +75,11 @@ def hostel_enviornment(path=0,start=0,end=0):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 
-        cv2.putText(frame, "INTELEGIX (Driver Monitoring System)", (110, 40),
+        cv2.putText(frame, "INTELEGIX (Hostel Monitoring System)", (110, 40),
                     font, 0.7*2, (255, 255, 255), 2)
         cv2.rectangle(frame, (20, 50), (W - 20, 15), (255, 255, 255), 2)
 
-        now = datetime.datetime.now()
+        now = datetime.now()
 
         current_time=now.strftime("%H:%M:%S")
 
@@ -110,6 +107,15 @@ def hostel_enviornment(path=0,start=0,end=0):
                     font, 0.5*2, (0, 120, 255), 1)
         cv2.putText(frame, safe_str, (10, H - 5),
                     font, 0.5*2, (0, 0, 150), 1)
+
+        now = datetime.now()
+        # cv2.imwrite(str("Data/Saved_Images/CLASS_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")), img)
+
+        # cv2.putText(img, str(now.strftime("%d-%m-%Y% %H:%M:%S")), (W-10, H - 5),
+        #             font, 0.5, (0, 0, 150), 1)
+        timex = str(now.strftime("%d/%m/%Y %H:%M:%S"))
+        cv2.putText(frame, timex, (W - 200, H - 10),
+                    font, 0.5 * 2, (255, 255, 255), 1)
 
         ln=net.getLayerNames()
 
@@ -191,6 +197,11 @@ def hostel_enviornment(path=0,start=0,end=0):
                     threading.Thread(target=telegram).start()
                     telegx = 0
 
+                    now = datetime.now()
+                    cv2.imwrite(
+                        str("Data/Saved_Images/HOSTEL_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")),
+                        frame)
+
         drowsey_level = "False"
 
         #Show video feed
@@ -206,5 +217,5 @@ def hostel_enviornment(path=0,start=0,end=0):
     cv2.destroyAllWindows()
 
 
-if __name__=="__main__":
-    hostel_enviornment(path=0,start="20:00:00",end="06:00:00")
+# if __name__=="__main__":
+#     hostel_enviornment(path=0,start="20:00:00",end="06:00:00")

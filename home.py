@@ -411,6 +411,11 @@ def main():
                     from ENGINES.AI_DRIVER_MONITORING_SYSTEM import AI_DRIVER_MONITORING
                     AI_DRIVER_MONITORING.AI_DRIVER_MONITORING(str(window_user_login2.filename))
 
+                if job=="HOSTEL ENVIRONMENT":
+
+                    from ENGINES.AI_Hostel_Environment_Monitoring import AI_HOSTEL_ENVIRONMENT
+                    AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=str(window_user_login2.filename),start="20:00:00",end="06:00:00")
+
             def run_live(self):
 
                 if job=="EXAM ENVIRONMENT":
@@ -422,6 +427,11 @@ def main():
 
                     from ENGINES.AI_DRIVER_MONITORING_SYSTEM import AI_DRIVER_MONITORING
                     AI_DRIVER_MONITORING.AI_DRIVER_MONITORING(0)
+
+                if job=="HOSTEL ENVIRONMENT":
+
+                    from ENGINES.AI_Hostel_Environment_Monitoring import AI_HOSTEL_ENVIRONMENT
+                    AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=0,start="20:00:00",end="06:00:00")
 
 
 
