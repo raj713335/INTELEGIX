@@ -139,9 +139,6 @@ def photo_viewer():
 
 
 
-
-
-
             image_viewer(iter)
 
 

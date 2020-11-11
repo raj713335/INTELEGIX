@@ -391,6 +391,8 @@ def main():
                 regx.destroy()
 
             def check_saved(self):
+
+                window_user_login2.destroy()
                 photo_viewer(job)
 
             def browse_file(self):
@@ -469,6 +471,7 @@ def main():
 
                 print(listx)
 
+
                 def image_viewer(iter, key=0):
 
                     print("ft", iter)
@@ -541,6 +544,8 @@ def main():
 
                 image_viewer(iter)
 
+
+
                 self.b0 = tk.Button(win,
                                     bg='#33ff00',
                                     fg='#b7f731',
@@ -569,9 +574,13 @@ def main():
                 self.h0 = ttk.Button(win, text=head_title, style='my.TButton', width=20)
                 self.h0.place(x=70, y=-1, width=1226, height=72)
 
+
+
             def quit(self):
                 window_user_login3.destroy()
                 exit(0)
+
+
 
         window_user_login3 = tk.Tk()
         window_user_login3.config(background='#EFEFEF')
