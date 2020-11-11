@@ -614,7 +614,7 @@ def AI_PROCTORING(path=0):
     inner_points = [[61, 67], [62, 66], [63, 65]]
 
     font = cv2.FONT_HERSHEY_SIMPLEX
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(path)
 
 
     d_outer = [19.0, 29.0, 28.0, 28.0, 19.0]

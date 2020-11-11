@@ -361,7 +361,7 @@ def main():
                 #                      width=20)
                 # self.b0b.place(x=1300, y=700, width=70, height=70)
 
-                self.b1 = ttk.Button(win, text='LIVE', width=20)
+                self.b1 = ttk.Button(win, text='LIVE', width=20,command=self.run_live)
                 self.b1.place(x=285, y=225, width=450, height=70)
 
                 self.b2 = ttk.Button(win, text='UPLOAD', width=20,command=self.browse_file)
@@ -403,7 +403,15 @@ def main():
 
                 from ENGINES.AI_ONLINE_EXAM_PROCTORING import AI_PROCTORING
 
+                AI_PROCTORING.AI_PROCTORING(str(window_user_login2.filename))
+
+            def run_live(self):
+
+
+                from ENGINES.AI_ONLINE_EXAM_PROCTORING import AI_PROCTORING
+
                 AI_PROCTORING.AI_PROCTORING(0)
+
 
 
 
