@@ -8,7 +8,6 @@ def AI_PROCTORING(path=0):
     import cv2
     import wget
     import requests
-    import pyautogui
     import threading
     import time
     import configparser
