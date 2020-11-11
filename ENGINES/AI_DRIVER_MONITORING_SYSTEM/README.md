@@ -84,13 +84,6 @@ Tips to train a custom based yolov4 based object Detection model you can refer t
 
 
 
-### FPS obtained
-
-Functionality | On Intel i5
---- | ---
-Mouth Detection | 7.2
-Person and Phone Detection | 1.3
-Head Pose Estimation | 8.5
 
 
 
