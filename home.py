@@ -401,16 +401,23 @@ def main():
                                                                 ("video files", "*.mp4"),("Video files", "*.mp4")))
                 print(window_user_login2.filename)
 
-                from ENGINES.AI_ONLINE_EXAM_PROCTORING import AI_PROCTORING
+                if job=="EXAM ENVIRONMENT":
 
-                AI_PROCTORING.AI_PROCTORING(str(window_user_login2.filename))
+                    from ENGINES.AI_ONLINE_EXAM_PROCTORING import AI_PROCTORING
+                    AI_PROCTORING.AI_PROCTORING(str(window_user_login2.filename))
+
+                if job=="BUS ENVIRONMENT":
+                    pass
 
             def run_live(self):
 
+                if job=="EXAM ENVIRONMENT":
 
-                from ENGINES.AI_ONLINE_EXAM_PROCTORING import AI_PROCTORING
+                    from ENGINES.AI_ONLINE_EXAM_PROCTORING import AI_PROCTORING
+                    AI_PROCTORING.AI_PROCTORING(0)
 
-                AI_PROCTORING.AI_PROCTORING(0)
+                if job=="BUS ENVIRONMENT":
+                    pass
 
 
 
