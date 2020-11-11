@@ -2,8 +2,12 @@
 
 Project to monitor driver behiviour while driving. If the application detects driver rules violation done by driver then it sends a warning/image to a Telegram/Whats App/Email through REST API.
 
+##### PROBLEM STATEMENT
+
 School Buses: Driver drowsy, driver talking on cellphone while driving, driver/conductor smoking in the bus etc
+
 ### Prerequisites
+
 
 For Application:
 ```
@@ -38,6 +42,7 @@ It has three vision based functionalities right now:
 
 
 ### When there is no detection of Driver Rules Violation 
+
 ![when there is no detection of Driver Rules Violation  ](SAMPLES/0.jpg)
 
 
@@ -47,7 +52,7 @@ Earlier, Dlib's frontal face HOG detector was used to find faces. However, it di
 It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes, mouth opening detection and head pose estimation.
 
 
-### Facial Landmarks
+### Facial Landmarks to detect if driver is Drowsy
 
 To give landmarking on the eyelashes and if two lines on upper and lower eyelashes intersect the the application gives a warning message indicating the driver is Drowsey.
 
