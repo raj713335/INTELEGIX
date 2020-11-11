@@ -37,8 +37,8 @@ It has three vision based functionalities right now:
 3. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is using cell phone while driving.
 
 
-### when there is no detection of fraud 
-![when there is no detection of fraud ](SAMPLES/0.jpg)
+### When there is no detection of Driver Rules Violation 
+![when there is no detection of Driver Rules Violation  ](SAMPLES/0.jpg)
 
 
 ### Face detection
@@ -48,6 +48,7 @@ It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes, mo
 
 
 ### Facial Landmarks
+
 To give landmarking on the eyelashes and if two lines on upper and lower eyelashes intersect the the application gives a warning message indicating the driver is Drowsey.
 
 It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and eyelashes.
@@ -58,11 +59,17 @@ It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and
 
 
 ### Smoking and cellphone Detection while driving 
+
 `AI_DRIVER_MONITORING.py` is for detecting drivers using mobile phones and smoking while driving . It is based on a custom trained yolov4 architecture based Darknet Model.
 
 Tips to train a custom based yolov4 based object Detection model you can refer to https://blog.roboflow.com/train-a-tensorflow2-object-detection-model/
 
 ![person counting and phone detection](SAMPLES/2.jpg)
+
+
+
+
+
 ![person counting and phone detection](SAMPLES/3.jpg)
 
 
