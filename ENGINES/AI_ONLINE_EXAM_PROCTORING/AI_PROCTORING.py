@@ -809,7 +809,7 @@ def AI_PROCTORING(path=0):
 
         cv2.putText(img, "INTELEGIX (Online Exam Proctoring System)", (80, 40),
                     font, 0.7, (255, 255, 255), 2)
-        cv2.rectangle(img, (20, 50), (W-50, 15), (255, 255, 255), 2)
+        cv2.rectangle(img, (20, 50), (W-20, 15), (255, 255, 255), 2)
         # cv2.putText(img, "RISK ANALYSIS", (30, 85),
         #             font, 0.5, (255, 255, 0), 1)
         # cv2.putText(img, "-- GREEN : SAFE", (H-100, 85),
