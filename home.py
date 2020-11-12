@@ -354,6 +354,17 @@ def main():
                                      width=20,command=self.quit)
                 self.b0r.place(x=1300, y=0, width=70, height=70)
 
+                if job == "HOSTEL ENVIRONMENT":
+                    self.txtfld1 = ttk.Combobox(win, font=("Helvetica", 20), justify='center',
+                                                state='readonly',value=[str("0"+str(x)+":00:00")[-8:] for x in range(0,24)])
+                    self.txtfld1.place(x=800,y=225,height=50,width=200)
+                    self.txtfld1.set("00:00:00")
+
+                    self.txtfld2 = ttk.Combobox(win, font=("Helvetica", 20), justify='center', state='readonly',
+                                                value=[str("0"+str(x)+":00:00")[-8:] for x in range(0, 24)])
+                    self.txtfld2.place(x=1100, y=225,height=50,width=200)
+                    self.txtfld2.set("00:00:00")
+
                 # self.b0b = tk.Button(win,
                 #                      bg='#33ff00',
                 #                      fg='#b7f731',
@@ -414,7 +425,7 @@ def main():
                 if job=="HOSTEL ENVIRONMENT":
 
                     from ENGINES.AI_Hostel_Environment_Monitoring import AI_HOSTEL_ENVIRONMENT
-                    AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=str(window_user_login2.filename),start="20:00:00",end="06:00:00")
+                    AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=str(window_user_login2.filename),start=str(self.txtfld1.get()),end=str(self.txtfld2.get()))
 
             def run_live(self):
 
@@ -431,7 +442,7 @@ def main():
                 if job=="HOSTEL ENVIRONMENT":
 
                     from ENGINES.AI_Hostel_Environment_Monitoring import AI_HOSTEL_ENVIRONMENT
-                    AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=0,start="20:00:00",end="06:00:00")
+                    AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=0,start=str(self.txtfld1.get()),end=str(self.txtfld2.get()))
 
 
 
