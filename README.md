@@ -115,11 +115,11 @@ Earlier, Dlib's facial landmarks model was used but it did not give good results
 
 
 <p align="center">
-    <img src="README/ONLINE_EXAM/2.jpg.png" width="400">
+    <img src="README/ONLINE_EXAM/0.png" width="400">
     <img src="README/ONLINE_EXAM/5.jpg" width="400">
     <img src="README/ONLINE_EXAM/4.jpg" width="400">
     <img src="README/ONLINE_EXAM/1.jpg" width="400">
-    <img src="README/ONLINE_EXAM/0.png" width="400">
+    <img src="README/ONLINE_EXAM/2.jpg" width="400">
 </p>
 
 
@@ -178,8 +178,8 @@ Tips to train a custom based yolov4 based object Detection model you can refer <
 <p align="center">
     <img src="README/DRIVER_MONITORING/0.jpg" width="400">
     <img src="README/DRIVER_MONITORING/1.jpg" width="400">
-    <img src="README/DRIVER_MONITORING/2.jpg" width="400" height="200">
-    <img src="README/DRIVER_MONITORING/3.jpg" width="400" height="200">
+    <img src="README/DRIVER_MONITORING/2.jpg" width="400">
+    <img src="README/DRIVER_MONITORING/3.jpg" width="400">
 </p>
 
 
