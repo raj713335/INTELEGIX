@@ -1,4 +1,11 @@
 # INTELEGIX (hack-ed-v10) Theme Intelligent Video Monitoring
+ 
+ 
+ <p align="center">
+    <img src="README/Cover.png", width="1400">
+    <br>
+    <sup><a href="https://www.hackerearth.com/challenges/hackathon/hack-ed-v10/" target="_blank">hack-ed-v10</a></sup>
+</p>
 
 
 
@@ -18,11 +25,6 @@ A cross platform desktop application for monitoring and analyzing from a live ca
 After Videos are analysed using Machine Learning , it saves and sends data via Email,Whats App Bots,and Telegram Bots via API Tokens/keys.
 
 This Application was created for Participating in HackerEarth Challenges hack-ed-v10 for K12 Techno Services.
- <p align="center">
-    <img src="README/Cover.png", width="1400">
-    <br>
-    <sup><a href="https://www.hackerearth.com/challenges/hackathon/hack-ed-v10/" target="_blank">hack-ed-v10</a></sup>
-</p>
 
 ## THEME Intelligent Video Monitoring
 
