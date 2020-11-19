@@ -123,7 +123,7 @@ Earlier, Dlib's facial landmarks model was used but it did not give good results
 ## AI DRIVER MONITORING SYSTEM :oncoming_bus:
 
 
-Project to monitor driver behiviour while driving. If the application detects driver rules violation done by driver then it sends a warning/image to a Telegram/Whats App/Email through REST API.
+Project to monitor driver behavior  while driving. If the application detects driver rules violation done by driver then it sends a warning/image to a Telegram/Whats App/Email through REST API.
 
 ##### PROBLEM STATEMENT
 
