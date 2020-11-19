@@ -1,4 +1,4 @@
-# INTELEGIX (hack-ed-v10)
+# INTELEGIX (hack-ed-v10) Theme Intelligent Video Monitoring
 
 
 
@@ -17,7 +17,7 @@ After Videos are analysed using Machine Learning , it saves and sends data via E
 This Application was created for Participating in HackerEarth Challenges hack-ed-v10 for K12 Techno Services.
 
 
-## THEMES
+## THEMES Intelligent Video Monitoring
 
 Develop a layer of analysis over video feed. It should be focussed around applications in a school or a classroom environment.
 
