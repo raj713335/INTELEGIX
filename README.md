@@ -86,38 +86,41 @@ It has four vision based functionalities right now:
     4. Head pose estimation to find where the person is looking.
 
 
-### Face detection
+- Face detection
 
-Earlier, Dlib's frontal face HOG detector was used to find faces. However, it did not give very good results. In face_detection different face detection models are compared and OpenCV's DNN module provides best result and the results are present in
-It is implemented in `AI_PROCTORING.py` and is used for tracking eyes, mouth opening detection and head pose estimation.
+    Earlier, Dlib's frontal face HOG detector was used to find faces. However, it did not give very good results. In face_detection different face detection models are compared and OpenCV's DNN module provides best result and the results are present in
+    It is implemented in `AI_PROCTORING.py` and is used for tracking eyes, mouth opening detection and head pose estimation.
 
 
-### Facial Landmarks
+- Facial Landmarks
 Earlier, Dlib's facial landmarks model was used but it did not give good results when face was at an angle.
 
-It is implemented in `AI_PROCTORING.py` and is used for tracking eyes, mouth opening detection, and head pose estimation.
+    It is implemented in `AI_PROCTORING.py` and is used for tracking eyes, mouth opening detection, and head pose estimation.
 
-### when there is no detection of fraud 
-![when there is no detection of fraud ](README/ONLINE_EXAM/0.png)
 
-### Mouth Opening Detection
+
+- Mouth Opening Detection
 `AI_PROCTORING.py` is used to check if the candidate opens his/her mouth during the exam after recording it initially. It's explanation can be found in the main article, however, it is using dlib which can be easily changed to the new models.
 
-![Mouth opening detection](README/ONLINE_EXAM/5.jpg)
 
-### Person counting and mobile phone detection
+
+- Person counting and mobile phone detection
 `AI_PROCTORING.py` is for counting persons and detecting mobile phones. YOLOv3 is used in Tensorflow.
 
-![person counting and phone detection](README/ONLINE_EXAM/4.jpg)
 
 
-### If no person is detected in the frame
-![person counting and phone detection](README/ONLINE_EXAM/1.jpg)
-
-### Head pose estimation
+- Head pose estimation
 `AI_PROCTORING.py` is used for finding where the head is facing. 
 
-![head pose estimation](README/ONLINE_EXAM/2.jpg)
+
+
+<p align="center">
+    <img src="README/ONLINE_EXAM/0.png" width="400">
+    <img src="README/ONLINE_EXAM/5.jpg" width="400">
+    <img src="README/ONLINE_EXAM/4.jpg" width="400">
+    <img src="README/ONLINE_EXAM/1.jpg" width="400">
+    <img src="README/ONLINE_EXAM/2.jpg" width="400">
+</p>
 
 
 
@@ -150,15 +153,7 @@ It has three vision based functionalities right now:
 3. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is using cell phone while driving.
 
 
-### When there is no detection of Driver Rules Violation 
 
-![when there is no detection of Driver Rules Violation  ](README/DRIVER_MONITORING/0.jpg)
-
-
-### Face detection
-
-Earlier, Dlib's frontal face HOG detector was used to find faces. However, it did not give very good results. In face_detection different face detection models are compared and OpenCV's DNN module provides best result and the results are present in
-It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes, mouth opening detection and head pose estimation.
 
 
 ### Facial Landmarks to detect if driver is Drowsy
@@ -167,7 +162,7 @@ To give landmarking on the eyelashes and if two lines on upper and lower eyelash
 
 It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and eyelashes.
 
-![when there is driver rules violation for sleeping ](README/DRIVER_MONITORING/1.jpg)
+
 
 
 
@@ -181,8 +176,10 @@ Tips to train a custom based yolov4 based object Detection model you can refer <
 
 
 <p align="center">
-    <img src="README/DRIVER_MONITORING/2.jpg", width="400">
-    <img src="README/DRIVER_MONITORING/3.jpg", width="400">
+    <img src="README/DRIVER_MONITORING/0.jpg" width="400">
+    <img src="README/DRIVER_MONITORING/1.jpg" width="400">
+    <img src="README/DRIVER_MONITORING/2.jpg" width="400">
+    <img src="README/DRIVER_MONITORING/3.jpg" width="400">
 </p>
 
 
