@@ -132,7 +132,7 @@ Project to monitor driver behiviour while driving. If the application detects dr
 
 
 <p align="center">
-    <img src="README/driver_monitoring.gif", width="1200">
+    <img src="README/bus_environment.gif", width="1200">
     <br>
     <sup><a href="https://github.com/raj713335/AI_DRIVER_MONITORING_SYSTEM" target="_blank"><strong>AI DRIVER MONITORING SYSTEM</strong></a></sup>
 </p>
