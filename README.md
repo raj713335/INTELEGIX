@@ -62,7 +62,7 @@ Develop a layer of analysis over video feed. It should be focussed around applic
 
 ## AI ONLINE EXAM MONITORING
 
-## DETECTION RESULT
+Project to create an automated proctoring system where the user can be monitored automatically through the webcam. The project has Computer Vision and ML-based functionalities to monitor a user and detect fraud, in case the application detects fraud it sends a warning/image to a Telegram/Whats App/Email through REST API.
 
 <p align="center">
     <img src="README/online_exam.gif", width="1200">
@@ -70,15 +70,9 @@ Develop a layer of analysis over video feed. It should be focussed around applic
     <sup><a href="https://github.com/raj713335/AI_ONLINE_EXAM_PROCTORING" target="_blank"><strong>AI ONLINE EXAM PROCTORING</strong></a></sup>
 </p>
 
+### Vision Statement
 
-
-
-Project to create an automated proctoring system where the user can be monitored automatically through the webcam. The project has Computer Vision and ML-based functionalities to monitor a user and detect fraud, in case the application detects fraud it sends a warning/image to a Telegram/Whats App/Email through REST API.
-
-
-### Vision
-
-It has four vision based functionalities right now:
+- It has four vision based functionalities right now:
 
     1. Find if the candidate opens his mouth by recording the distance between lips at starting.
     2. Instance segmentation to count number of people and report if no one or more than one person detected.
@@ -131,11 +125,11 @@ Project to monitor driver behiviour while driving. If the application detects dr
 
 ##### PROBLEM STATEMENT
 
-School Buses: Driver drowsy, driver talking on cellphone while driving, driver/conductor smoking in the bus etc
+- School Buses: Driver drowsy, driver talking on cellphone while driving, driver/conductor smoking in the bus etc
 
 
 
-## DETECTION RESULT
+
 
 <p align="center">
     <img src="README/driver_monitoring.gif", width="1200">
@@ -144,34 +138,34 @@ School Buses: Driver drowsy, driver talking on cellphone while driving, driver/c
 </p>
 
 
-## Vision
+## Vision Statement
 
-It has three vision based functionalities right now:
+- It has three vision based functionalities right now:
 
-1. Detects if a Driver is drowsy.
-2. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is smoking while driving.
-3. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is using cell phone while driving.
-
-
-
-
-
-### Facial Landmarks to detect if driver is Drowsy
-
-To give landmarking on the eyelashes and if two lines on upper and lower eyelashes intersect the the application gives a warning message indicating the driver is Drowsey.
-
-It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and eyelashes.
+    1. Detects if a Driver is drowsy.
+    2. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is smoking while driving.
+    3. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is using cell phone while driving.
+    
 
 
 
 
+- Facial Landmarks to detect if driver is Drowsy
+
+    To give landmarking on the eyelashes and if two lines on upper and lower eyelashes intersect the the application gives a warning message indicating the driver is Drowsey.
+    
+    It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and eyelashes.
+    
 
 
-### Smoking and cellphone Detection while driving 
 
-`AI_DRIVER_MONITORING.py` is for detecting drivers using mobile phones and smoking while driving . It is based on a custom trained yolov4 architecture based Darknet Model.
 
-Tips to train a custom based yolov4 based object Detection model you can refer <a href="https://blog.roboflow.com/train-a-tensorflow2-object-detection-model/">here.</a>
+
+- Smoking and cellphone Detection while driving 
+
+    `AI_DRIVER_MONITORING.py` is for detecting drivers using mobile phones and smoking while driving . It is based on a custom trained yolov4 architecture based Darknet Model.
+    
+    Tips to train a custom based yolov4 based object Detection model you can refer <a href="https://blog.roboflow.com/train-a-tensorflow2-object-detection-model/">here.</a>
 
 
 
@@ -182,6 +176,29 @@ Tips to train a custom based yolov4 based object Detection model you can refer <
     <img src="README/DRIVER_MONITORING/3.jpg" width="400">
 </p>
 
+
+## AI HOSTEL MONITORING SYSTEM 
+
+
+Project Hostel environment: Students outside dorms after designated timings, Unauthorized entry in campus. If the application detects a person in unauthorised area or after entry timings then it sends a warning/image to a Telegram/Whats App/Email through REST API.
+
+##### PROBLEM STATEMENT
+
+- Hostel environment: Students outside dorms after designated timings, Unauthorized entry in campus etc
+
+
+<p align="center">
+    <img src="README/hostel_monitoring.gif", width="1200">
+    <br>
+</p>
+
+
+## Vision Statement
+
+- It has one vision based functionalities right now:
+
+    1. Uses a custom trained model based on yolov4 Darknet architecture to detect a person.
+    
 
 
 ### FPS obtained

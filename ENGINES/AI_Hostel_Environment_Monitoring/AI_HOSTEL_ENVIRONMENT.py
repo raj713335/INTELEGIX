@@ -164,7 +164,7 @@ def hostel_enviornment(path=0,start="20:00:00",end="06:00:00"):
                 label = str(classes[classIDs[i]])
                 color = (0,0,255)
                 cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
-                cv2.putText(frame, label, (x, y + 30), font, 3, color, 2)
+                #cv2.putText(frame, label, (x, y + 30), font, 3, color, 2)
                 iter+=1
 
 
@@ -202,7 +202,7 @@ def hostel_enviornment(path=0,start="20:00:00",end="06:00:00"):
                         str("Data/Saved_Images/HOSTEL_ENVIRONMENT/") + str(now.strftime("%Y%m%d%H%M%S") + str(".jpg")),
                         frame)
 
-        drowsey_level = "False"
+
 
         #Show video feed
         cv2.namedWindow("Output", cv2.WINDOW_NORMAL)
