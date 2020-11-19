@@ -58,6 +58,7 @@ Develop a layer of analysis over video feed. It should be focussed around applic
     
 # INTELEGIX WORKING SAMPLE
 
+## AI ONLINE EXAM MONITORING
 
 ## DETECTION RESULT
 
@@ -68,7 +69,7 @@ Develop a layer of analysis over video feed. It should be focussed around applic
 </p>
 
 
-## AI ONLINE EXAM MONITORING
+
 
 Project to create an automated proctoring system where the user can be monitored automatically through the webcam. The project has Computer Vision and ML-based functionalities to monitor a user and detect fraud, in case the application detects fraud it sends a warning/image to a Telegram/Whats App/Email through REST API.
 
