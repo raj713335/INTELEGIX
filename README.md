@@ -19,7 +19,7 @@ After Videos are analysed using Machine Learning , it saves and sends data via E
 
 This Application was created for Participating in HackerEarth Challenges hack-ed-v10 for K12 Techno Services.
  <p align="center">
-    <img src="README/cover.png", width="1400">
+    <img src="README/Cover.png", width="1400">
     <br>
     <sup><a href="https://www.hackerearth.com/challenges/hackathon/hack-ed-v10/" target="_blank">hack-ed-v10</a></sup>
 </p>
