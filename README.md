@@ -1,4 +1,4 @@
-# INTELEGIX (hack-ed-v10) Theme Intelligent Video Monitoring
+# INTELEGIX (hack-ed-v10) Theme Intelligent Video Monitoring :cinema:
  
  
  <p align="center">
