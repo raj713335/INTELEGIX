@@ -65,7 +65,7 @@ $ cd INTELEGIX
 - Delete the current Data folder inside INTELEGIX folder and then download the Data.zip from the given url and extract and copy the data folder in INTELEGIX folder
 
 ```sh
-$ wget https://github.com/raj713335/INTELEGIX.git
+$ wget https://drive.google.com/uc?id=1YnA1wmaBoD3MPLEUWmZoUsvCsySB5Ng2&export=download
 ```
 
 - Install Python and its required Packages like tensorflow etc.
@@ -92,5 +92,15 @@ $ pip install pyinstaller
 - Run the app
 
 ```sh
-$ python YT.py
+$ python home.py
+```
+
+
+## Packaging the Application for Creating a Execulatle exe File that acn run in Windows,Linus,or Mac OS
+
+You can pass any valid `pyinstaller` flag in the following command to further customize the way your app is built.
+for reference read the pyinstaller documentation <a href="https://pyinstaller.readthedocs.io/en/stable/usage.html">here.</a>
+
+```sh
+$ pyinstaller -i "favicon.ico" --onefile -w --hiddenimport=EasyTkinter --hiddenimport=Pillow  --hiddenimport=opencv-python --hiddenimport=requests--hiddenimport=Configparser --hiddenimport=PyAutoGUI --hiddenimport=numpy --hiddenimport=pandas --hiddenimport=urllib3 --hiddenimport=tensorflow --hiddenimport=scikit-learn --hiddenimport=wget --hiddenimport=pygame --hiddenimport=dlib --hiddenimport=imutils --hiddenimport=deepface --hiddenimport=keras --hiddenimport=cvlib --name INTELEGIX home.py
 ```
