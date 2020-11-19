@@ -2,7 +2,7 @@
  
  
  <p align="center">
-    <img src="README/Cover.png", width="1400">
+    <img src="README/Cover.png" width="1400">
     <br>
     <sup><a href="https://www.hackerearth.com/challenges/hackathon/hack-ed-v10/" target="_blank">hack-ed-v10</a></sup>
 </p>
