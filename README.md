@@ -200,6 +200,29 @@ Project Hostel environment: Students outside dorms after designated timings, Una
     1. Uses a custom trained model based on yolov4 Darknet architecture to detect a person.
     
 
+## AI Corridor MONITORING SYSTEM 
+
+Discipline in corridors and open areas, Gents entering ladies washrooms and vice versa. If the application detects a person in unauthorised washroom corridor after gender detection then it sends a warning/image to a Telegram/Whats App/Email through REST API.
+
+##### PROBLEM STATEMENT
+
+- Discipline in corridors and open areas, Gents entering ladies washrooms and vice versa, Detecting vandalism, Detecting medical emergencies etc
+
+<p align="center">
+    <img src="README/corridor_environment.gif" width="1200">
+    <br>
+</p>
+
+
+## Vision Statement
+
+- It has two vision based functionalities right now:
+
+    1. Uses a custom trained model based on yolov4 Darknet architecture to detect a person.
+    2. Uses a custom trained model to do gender detection on the person and show result.
+    3. If the person is standing near a opposite gender washroom then it signals violation.
+    
+
 
 ### FPS obtained
 
