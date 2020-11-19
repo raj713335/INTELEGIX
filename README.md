@@ -65,7 +65,7 @@ Develop a layer of analysis over video feed. It should be focussed around applic
 Project to create an automated proctoring system where the user can be monitored automatically through the webcam. The project has Computer Vision and ML-based functionalities to monitor a user and detect fraud, in case the application detects fraud it sends a warning/image to a Telegram/Whats App/Email through REST API.
 
 <p align="center">
-    <img src="README/online_exam.gif", width="1200">
+    <img src="README/online_exam.gif" width="1200">
     <br>
     <sup><a href="https://github.com/raj713335/AI_ONLINE_EXAM_PROCTORING" target="_blank"><strong>AI ONLINE EXAM PROCTORING</strong></a></sup>
 </p>
@@ -78,6 +78,8 @@ Project to create an automated proctoring system where the user can be monitored
     2. Instance segmentation to count number of people and report if no one or more than one person detected.
     3. Find and report any instances of mobile phones.
     4. Head pose estimation to find where the person is looking.
+    5. If the person in violating any of the above specified protocols then it signals violation.
+    6. Sends the violating image sample in the Telegram Group Via Rest API with the use of Tokens and Bot.
 
 
 - Face detection
@@ -132,7 +134,7 @@ Project to monitor driver behiviour while driving. If the application detects dr
 
 
 <p align="center">
-    <img src="README/bus_environment.gif", width="1200">
+    <img src="README/bus_environment.gif" width="1200">
     <br>
     <sup><a href="https://github.com/raj713335/AI_DRIVER_MONITORING_SYSTEM" target="_blank"><strong>AI DRIVER MONITORING SYSTEM</strong></a></sup>
 </p>
@@ -145,7 +147,8 @@ Project to monitor driver behiviour while driving. If the application detects dr
     1. Detects if a Driver is drowsy.
     2. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is smoking while driving.
     3. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is using cell phone while driving.
-    
+    4. If the person in violating any of the above specified protocols then it signals violation.
+    5. Sends the violating image sample in the Telegram Group Via Rest API with the use of Tokens and Bot.  
 
 
 
@@ -198,7 +201,8 @@ Project Hostel environment: Students outside dorms after designated timings, Una
 - It has one vision based functionalities right now:
 
     1. Uses a custom trained model based on yolov4 Darknet architecture to detect a person.
-    
+    2. If the person in unauthorised area or outside dorms after designated timings then it signals violation.
+    3. Sends the violating image sample in the Telegram Group Via Rest API with the use of Tokens and Bot.
 
 ## AI Corridor MONITORING SYSTEM 
 
@@ -221,6 +225,7 @@ Discipline in corridors and open areas, Gents entering ladies washrooms and vice
     1. Uses a custom trained model based on yolov4 Darknet architecture to detect a person.
     2. Uses a custom trained model to do gender detection on the person and show result.
     3. If the person is standing near a opposite gender washroom then it signals violation.
+    4. Sends the violating image sample in the Telegram Group Via Rest API with the use of Tokens and Bot.
     
 
 
@@ -248,7 +253,7 @@ $ cd INTELEGIX
 $ wget https://drive.google.com/uc?id=1YnA1wmaBoD3MPLEUWmZoUsvCsySB5Ng2&export=download
 ```
 
-- Install Python and its required Packages like tensorflow etc.
+- Install Python 3.7.3 and its required Packages like tensorflow etc.
 
 ```sh
 $ pip install EasyTkinter==1.1.0
