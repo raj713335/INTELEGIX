@@ -252,7 +252,7 @@ def main():
                 self.b5 = ttk.Button(win, text='Corridor Environment', width=20,command=self.corridor)
                 self.b5.place(x=1050, y=380, width=200, height=70)
 
-                self.b6 = ttk.Button(win, text='SETTINGS', width=20,command=self.classs)
+                self.b6 = ttk.Button(win, text='SETTINGS', width=20,command=self.settings)
                 self.b6.place(x=1000, y=170, width=200, height=70)
 
 
@@ -262,13 +262,91 @@ def main():
 
                 regx.destroy()
 
+
+            def settings(self):
+
+                class TOKENS():
+
+                    def __init__(self, tokens):
+
+
+
+                        config = configparser.ConfigParser()
+                        config.read('Data/Keys/config.ini')
+                        config_token = config.items('TOKEN')
+                        TOKEN = str(config_token[0][1])
+                        UP_URL = str(config_token[1][1])
+
+
+                        self.lbl = tk.Label(tokens, text="TOKEN", font=("Helvetica", 30, 'bold'), bg='white')
+                        self.lbl.place(x=60, y=70)
+
+                        self.txtfld1 = ttk.Combobox(tokens, values=TOKEN, font=("Helvetica", 30, 'bold'))
+                        self.txtfld1.place(x=220, y=70, width=350)
+                        self.txtfld1.set(TOKEN)
+
+                        self.lb2 = tk.Label(tokens, text="BOT", font=("Helvetica", 30, 'bold'), bg='white')
+                        self.lb2.place(x=60, y=170)
+
+                        self.txtfld2 = ttk.Combobox(tokens, values=UP_URL, font=("Helvetica", 30, 'bold'))
+                        self.txtfld2.place(x=220, y=170, width=350)
+                        self.txtfld2.set(UP_URL)
+
+
+
+                        self.btn = ttk.Button(tokens, text="SUBMIT", width=20, command=self.token_validate)
+                        self.btn.place(x=340, y=250, width=230, height=50)
+
+                        # self.btn_quit = ttk.Button(tokens, text="QUIT", command=self.quit)
+                        # self.btn_quit.place(x=875, y=-1)
+
+                    def token_validate(self):
+                        if (str(self.txtfld1.get()) != "") and (str(self.txtfld2.get()) != ""):
+
+                            config = configparser.ConfigParser()
+                            config.write('Data/Keys/config.ini')
+
+                            file = open('Data/Keys/config.ini', "w+")
+
+                            config.add_section('TOKEN')
+                            config.set('TOKEN', 'TOKEN', str(self.txtfld1.get()))
+                            config.set('TOKEN', 'UP_URL', str(self.txtfld2.get()))
+
+
+                            config.write(file)
+                            file.close()
+
+                            tk.messagebox.showinfo("Success", "Updated Successfully")
+
+                            tokens_user_login.destroy()
+
+
+
+
+
+                        else:
+                            tk.messagebox.showerror("Error", "EMPTY VALUES")
+
+                    def quit(self):
+                        tokens_user_login.destroy()
+
+                tokens_user_login = tk.Tk()
+                tokens_user_login.config(background='white')
+                tokens_user_login.attributes('-alpha', 0.9)
+
+                user_login_tokens = TOKENS(tokens_user_login)
+                tokens_user_login.iconbitmap(default='DATA/Images/icons/favicon.ico')
+                tokens_user_login.title('TELEGRAM ADMIN ' + version)
+                tokens_user_login.geometry("650x350")
+                tokens_user_login.mainloop()
+
             def quit(self):
                 window_user_login1.destroy()
                 exit(0)
 
             def classs(self):
                 window_user_login1.destroy()
-                second(user_key=user_key,job="CLASS ENVIRONMENT")
+                second(user_key=user_key,job="EXAM ENVIRONMENT")
 
             def hostel(self):
                 window_user_login1.destroy()
