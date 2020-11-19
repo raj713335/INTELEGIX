@@ -60,7 +60,7 @@ Develop a layer of analysis over video feed. It should be focussed around applic
     
 # INTELEGIX WORKING SAMPLE
 
-## AI ONLINE EXAM MONITORING
+## AI ONLINE EXAM MONITORING :man_teacher:
 
 Project to create an automated proctoring system where the user can be monitored automatically through the webcam. The project has Computer Vision and ML-based functionalities to monitor a user and detect fraud, in case the application detects fraud it sends a warning/image to a Telegram/Whats App/Email through REST API.
 
@@ -120,7 +120,7 @@ Earlier, Dlib's facial landmarks model was used but it did not give good results
 
 
 
-## AI DRIVER MONITORING SYSTEM 
+## AI DRIVER MONITORING SYSTEM :oncoming_bus:
 
 
 Project to monitor driver behiviour while driving. If the application detects driver rules violation done by driver then it sends a warning/image to a Telegram/Whats App/Email through REST API.
@@ -180,7 +180,7 @@ Project to monitor driver behiviour while driving. If the application detects dr
 </p>
 
 
-## AI HOSTEL MONITORING SYSTEM 
+## AI HOSTEL MONITORING SYSTEM :no_pedestrians:
 
 
 Project Hostel environment: Students outside dorms after designated timings, Unauthorized entry in campus. If the application detects a person in unauthorised area or after entry timings then it sends a warning/image to a Telegram/Whats App/Email through REST API.
@@ -204,7 +204,8 @@ Project Hostel environment: Students outside dorms after designated timings, Una
     2. If the person in unauthorised area or outside dorms after designated timings then it signals violation.
     3. Sends the violating image sample in the Telegram Group Via Rest API with the use of Tokens and Bot.
 
-## AI Corridor MONITORING SYSTEM 
+
+## AI Corridor MONITORING SYSTEM :toilet:
 
 Discipline in corridors and open areas, Gents entering ladies washrooms and vice versa. If the application detects a person in unauthorised washroom corridor after gender detection then it sends a warning/image to a Telegram/Whats App/Email through REST API.
 
