@@ -188,7 +188,7 @@ Project Hostel environment: Students outside dorms after designated timings, Una
 
 
 <p align="center">
-    <img src="README/hostel_monitoring.gif", width="1200">
+    <img src="README/hostel_enviroment.gif", width="1200">
     <br>
 </p>
 
