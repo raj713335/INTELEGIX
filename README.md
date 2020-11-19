@@ -178,14 +178,12 @@ It is implemented in `AI_DRIVER_MONITORING.py` and is used for tracking eyes,and
 
 Tips to train a custom based yolov4 based object Detection model you can refer <a href="https://blog.roboflow.com/train-a-tensorflow2-object-detection-model/">here.</a>
 
-![smoking detection](README/DRIVER_MONITORING/2.jpg)
 
 
-
-
-
-![smoking and drowseyness detection](README/DRIVER_MONITORING/3.jpg)
-
+<p align="center">
+    <img src="README/DRIVER_MONITORING/2.jpg", width="400">
+    <img src="README/DRIVER_MONITORING/3.jpg", width="400">
+</p>
 
 
 
