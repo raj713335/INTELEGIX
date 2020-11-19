@@ -252,7 +252,7 @@ def main():
                 self.b5 = ttk.Button(win, text='Corridor Environment', width=20,command=self.corridor)
                 self.b5.place(x=1050, y=380, width=200, height=70)
 
-                self.b6 = ttk.Button(win, text='START', width=20,command=self.classs)
+                self.b6 = ttk.Button(win, text='SETTINGS', width=20,command=self.classs)
                 self.b6.place(x=1000, y=170, width=200, height=70)
 
 
@@ -365,6 +365,17 @@ def main():
                     self.txtfld2.place(x=1100, y=225,height=50,width=200)
                     self.txtfld2.set("00:00:00")
 
+                if job == "CORRIDOR ENVIRONMENT":
+                    self.txtfld1 = ttk.Combobox(win, font=("Helvetica", 20), justify='center',
+                                                state='readonly',value=['man','woman'])
+                    self.txtfld1.place(x=800,y=225,height=50,width=200)
+
+
+                    # self.txtfld2 = ttk.Combobox(win, font=("Helvetica", 20), justify='center', state='readonly',
+                    #                             value=[str("0"+str(x)+":00:00")[-8:] for x in range(0, 24)])
+                    # self.txtfld2.place(x=1100, y=225,height=50,width=200)
+                    # self.txtfld2.set("00:00:00")
+
                 # self.b0b = tk.Button(win,
                 #                      bg='#33ff00',
                 #                      fg='#b7f731',
@@ -427,6 +438,12 @@ def main():
                     from ENGINES.AI_Hostel_Environment_Monitoring import AI_HOSTEL_ENVIRONMENT
                     AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=str(window_user_login2.filename),start=str(self.txtfld1.get()),end=str(self.txtfld2.get()))
 
+
+                if job=="CORRIDOR ENVIRONMENT":
+
+                    from ENGINES.AI_Washroom_Corridor_Environment_Monitoring import AI_Washroom_Corridor_ENVIRONMENT
+                    AI_Washroom_Corridor_ENVIRONMENT.corridor_enviornment(path=str(window_user_login2.filename),gender=str(self.txtfld1.get()))
+
             def run_live(self):
 
                 if job=="EXAM ENVIRONMENT":
@@ -445,7 +462,10 @@ def main():
                     AI_HOSTEL_ENVIRONMENT.hostel_enviornment(path=0,start=str(self.txtfld1.get()),end=str(self.txtfld2.get()))
 
 
+                if job=="CORRIDOR ENVIRONMENT":
 
+                    from ENGINES.AI_Washroom_Corridor_Environment_Monitoring import AI_Washroom_Corridor_ENVIRONMENT
+                    AI_Washroom_Corridor_ENVIRONMENT.corridor_enviornment(path=0,gender=str(self.txtfld1.get()))
 
 
 
@@ -590,7 +610,7 @@ def main():
                                     bg='#33ff00',
                                     fg='#b7f731',
                                     relief='flat',
-                                    width=20)
+                                    width=20,command=self.back)
                 self.b0.place(x=0, y=0, width=70, height=70)
 
                 self.b0r = tk.Button(win,
@@ -619,6 +639,10 @@ def main():
             def quit(self):
                 window_user_login3.destroy()
                 exit(0)
+
+            def back(self):
+                window_user_login3.destroy()
+                display()
 
 
 
