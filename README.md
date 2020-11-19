@@ -95,31 +95,31 @@ Earlier, Dlib's facial landmarks model was used but it did not give good results
 
 It is implemented in `AI_PROCTORING.py` and is used for tracking eyes, mouth opening detection, and head pose estimation.
 
-### when there is no detection of fraud 
+- when there is no detection of fraud 
 ![when there is no detection of fraud ](README/ONLINE_EXAM/0.png)
 
-### Mouth Opening Detection
+- Mouth Opening Detection
 `AI_PROCTORING.py` is used to check if the candidate opens his/her mouth during the exam after recording it initially. It's explanation can be found in the main article, however, it is using dlib which can be easily changed to the new models.
 
 ![Mouth opening detection](README/ONLINE_EXAM/5.jpg)
 
-### Person counting and mobile phone detection
+- Person counting and mobile phone detection
 `AI_PROCTORING.py` is for counting persons and detecting mobile phones. YOLOv3 is used in Tensorflow.
 
 ![person counting and phone detection](README/ONLINE_EXAM/4.jpg)
 
 
-### If no person is detected in the frame
+- If no person is detected in the frame
 ![person counting and phone detection](README/ONLINE_EXAM/1.jpg)
 
-### Head pose estimation
+- Head pose estimation
 `AI_PROCTORING.py` is used for finding where the head is facing. 
 
 ![head pose estimation](README/ONLINE_EXAM/2.jpg)
 
 
 
-### FPS obtained
+#### FPS obtained
 
 Functionality | On Intel i5
 --- | ---
