@@ -232,7 +232,7 @@ def main():
                                     bg='#33ff00',
                                     fg='#b7f731',
                                     relief='flat',
-                                    width=20)
+                                    width=20,command=self.settings)
                 self.b0b.place(x=1300, y=700, width=70, height=70)
 
 
