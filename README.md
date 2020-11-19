@@ -72,7 +72,7 @@ Project to create an automated proctoring system where the user can be monitored
 
 ### Vision Statement
 
-- It has four vision based functionalities right now:
+- It has six vision based functionalities right now:
 
     1. Find if the candidate opens his mouth by recording the distance between lips at starting.
     2. Instance segmentation to count number of people and report if no one or more than one person detected.
@@ -142,7 +142,7 @@ Project to monitor driver behiviour while driving. If the application detects dr
 
 ## Vision Statement
 
-- It has three vision based functionalities right now:
+- It has five vision based functionalities right now:
 
     1. Detects if a Driver is drowsy.
     2. Uses a custom trained model based on yolov4 Darknet architecture to detect if a person is smoking while driving.
@@ -191,14 +191,14 @@ Project Hostel environment: Students outside dorms after designated timings, Una
 
 
 <p align="center">
-    <img src="README/hostel_enviroment.gif", width="1200">
+    <img src="README/hostel_enviroment.gif" width="1200">
     <br>
 </p>
 
 
 ## Vision Statement
 
-- It has one vision based functionalities right now:
+- It has three vision based functionalities right now:
 
     1. Uses a custom trained model based on yolov4 Darknet architecture to detect a person.
     2. If the person in unauthorised area or outside dorms after designated timings then it signals violation.
@@ -220,7 +220,7 @@ Discipline in corridors and open areas, Gents entering ladies washrooms and vice
 
 ## Vision Statement
 
-- It has two vision based functionalities right now:
+- It has four vision based functionalities right now:
 
     1. Uses a custom trained model based on yolov4 Darknet architecture to detect a person.
     2. Uses a custom trained model to do gender detection on the person and show result.
