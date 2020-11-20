@@ -11,12 +11,9 @@
 
 A cross-platform desktop application for monitoring and analyzing from a live camera feed or videos files to analyze data for
 
-    1.  Exam environment: Monitor if students are participating in any malpractices during the exam. 
-    
-    3.  Hostel environment: Students outside dorms after designated timings, Unauthorized entry in campus, etc
-
-    4.  School Buses: Driver drowsy, a driver talking on a cellphone while driving, driver/conductor smoking in the bus, etc
-    
+    1.  Exam environment: Monitor if students are participating in any malpractices during the exam.     
+    2.  School Buses: Driver drowsy, a driver talking on a cellphone while driving, driver/conductor smoking in the bus, etc
+    3.  Hostel environment: Students outside dorms after designated timings, Unauthorized entry in campus, etc.
     4.  Corridor environment (outside classroom): Gents entering ladies' washrooms and vice versa.
     
 After Videos are analysed using Machine & Deep Learning, it saves and sends data via Email, What's App Bots, and Telegram Bots via API Tokens/keys.
