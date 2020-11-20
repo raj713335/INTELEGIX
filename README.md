@@ -60,7 +60,7 @@ Develop a layer of analysis over video feed. It should be focussed around applic
     
 # INTELEGIX WORKING SAMPLE
 
-- For Video Demostration refer to the youTube link <a href="https://youtu.be/GAfp1vnejlY">here.</a>
+- For Video Demostration refer to the YouTube link <a href="https://youtu.be/GAfp1vnejlY">here.</a>
 
 ## GUI INTERFACE SAMPLES
 
