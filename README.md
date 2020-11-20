@@ -9,22 +9,22 @@
 
 
 
-A cross platform desktop application for monitoring and analyzing from a live camera feed or videos files to analyse data for
+A cross-platform desktop application for monitoring and analyzing from a live camera feed or videos files to analyze data for
 
-    1.  Classroom environment: How much students are participating in discussions, how is the discipline in the class etc
+    1.  Classroom environment: How much students are participating in discussions, how is the discipline in the class, etc
       
-    2.  Corridor environment (outside classroom): Gents entering ladies washrooms and vice versa.
+    2.  Corridor environment (outside classroom): Gents entering ladies' washrooms and vice versa.
     
-    3.  Hostel environment: Students outside dorms after designated timings, Unauthorized entry in campus etc
+    3.  Hostel environment: Students outside dorms after designated timings, Unauthorized entry in campus, etc
 
-    4.  School Buses: Driver drowsy, driver talking on cellphone while driving, driver/conductor smoking in the bus etc
+    4.  School Buses: Driver drowsy, a driver talking on a cellphone while driving, driver/conductor smoking in the bus, etc
     
-    5.  Online Exam : To monitor if the student is participating in any malpractices like using cell phones , talking,
+    5.  Online Exam: To monitor if the student is participating in any malpractices like using cell phones, talking,
         looking here and there etc.
     
-After Videos are analysed using Machine Learning , it saves and sends data via Email,Whats App Bots,and Telegram Bots via API Tokens/keys.
+After Videos are analysed using Machine & Deep Learning, it saves and sends data via Email, What's App Bots, and Telegram Bots via API Tokens/keys.
 
-This Application was created for Participating in HackerEarth Challenges hack-ed-v10 for K12 Techno Services.
+This Application was created for Participating in HackerEarth Challenges hack-ed-v10 for K12 Techno Services. <a href="https://www.hackerearth.com/challenges/hackathon/hack-ed-v10/">Hack-ED V1.0</a>
 
 ## THEME 1 (Intelligent Video Monitoring) :camera_flash:
 
