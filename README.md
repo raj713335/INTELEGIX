@@ -11,7 +11,7 @@
 
 A cross-platform desktop application for monitoring and analyzing from a live camera feed or videos files to analyze data for
 
-    1.  Classroom environment: How much students are participating in discussions, how is the discipline in the class, etc
+    1.  Exam environment: Monitor if students are participating in any malpractices during the exam. 
       
     2.  Corridor environment (outside classroom): Gents entering ladies' washrooms and vice versa.
     
