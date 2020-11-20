@@ -65,15 +65,15 @@ Develop a layer of analysis over video feed. It should be focussed around applic
 ## GUI INTERFACE SAMPLES
 
 <p align="center">
-    <img src="README/GUI_INTERFACE/1.png" width="300">
-    <img src="README/GUI_INTERFACE/2.png" width="300">
-    <img src="README/GUI_INTERFACE/3.png" width="300">
-    <img src="README/GUI_INTERFACE/4.png" width="300">
-    <img src="README/GUI_INTERFACE/5.png" width="300">
-    <img src="README/GUI_INTERFACE/6.png" width="300">
-    <img src="README/GUI_INTERFACE/7.png" width="300">
-    <img src="README/GUI_INTERFACE/8.png" width="300">
-    <img src="README/GUI_INTERFACE/9.png" width="300">
+    <img src="README/GUI_INTERFACE/1.png" width="250">
+    <img src="README/GUI_INTERFACE/2.png" width="250">
+    <img src="README/GUI_INTERFACE/3.png" width="250">
+    <img src="README/GUI_INTERFACE/4.png" width="250">
+    <img src="README/GUI_INTERFACE/5.png" width="250">
+    <img src="README/GUI_INTERFACE/6.png" width="250">
+    <img src="README/GUI_INTERFACE/7.png" width="250">
+    <img src="README/GUI_INTERFACE/8.png" width="250">
+    <img src="README/GUI_INTERFACE/9.png" width="250">
 </p>
 
 
