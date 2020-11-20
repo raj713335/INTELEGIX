@@ -1,4 +1,4 @@
-ACCES TOKENS
+ACCESS TOKENS
 
 User : root
 Password : root

@@ -60,6 +60,23 @@ Develop a layer of analysis over video feed. It should be focussed around applic
     
 # INTELEGIX WORKING SAMPLE
 
+- For Video Demostration refer to the youTube link <a href="https://youtu.be/GAfp1vnejlY">here.</a>
+
+## GUI INTERFACE SAMPLES
+
+<p align="center">
+    <img src="README/GUI_INTERFACE/1.png" width="300">
+    <img src="README/GUI_INTERFACE/2.png" width="300">
+    <img src="README/GUI_INTERFACE/3.png" width="300">
+    <img src="README/GUI_INTERFACE/4.png" width="300">
+    <img src="README/GUI_INTERFACE/5.png" width="300">
+    <img src="README/GUI_INTERFACE/6.png" width="300">
+    <img src="README/GUI_INTERFACE/7.png" width="300">
+    <img src="README/GUI_INTERFACE/8.png" width="300">
+    <img src="README/GUI_INTERFACE/9.png" width="300">
+</p>
+
+
 ## AI ONLINE EXAM MONITORING :man_teacher:
 
 Project to create an automated proctoring system where the user can be monitored automatically through the webcam. The project has Computer Vision and ML-based functionalities to monitor a user and detect fraud, in case the application detects fraud it sends a warning/image to a Telegram/Whats App/Email through REST API.
