@@ -19,8 +19,7 @@ A cross-platform desktop application for monitoring and analyzing from a live ca
 
     4.  School Buses: Driver drowsy, a driver talking on a cellphone while driving, driver/conductor smoking in the bus, etc
     
-    5.  Online Exam: To monitor if the student is participating in any malpractices like using cell phones, talking,
-        looking here and there etc.
+    
     
 After Videos are analysed using Machine & Deep Learning, it saves and sends data via Email, What's App Bots, and Telegram Bots via API Tokens/keys.
 
