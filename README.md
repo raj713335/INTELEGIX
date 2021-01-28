@@ -301,3 +301,15 @@ for reference read the pyinstaller documentation <a href="https://pyinstaller.re
 ```sh
 $ pyinstaller -i "favicon.ico" --onefile -w --hiddenimport=EasyTkinter --hiddenimport=Pillow  --hiddenimport=opencv-python --hiddenimport=requests--hiddenimport=Configparser --hiddenimport=PyAutoGUI --hiddenimport=numpy --hiddenimport=pandas --hiddenimport=urllib3 --hiddenimport=tensorflow --hiddenimport=scikit-learn --hiddenimport=wget --hiddenimport=pygame --hiddenimport=dlib --hiddenimport=imutils --hiddenimport=deepface --hiddenimport=keras --hiddenimport=cvlib --name INTELEGIX home.py
 ```
+
+
+
+# RESULT INTELEGIX (hack-ed-v10) Theme 1 Intelligent Video Monitoring :cinema:
+ 
+ 
+ <p align="center">
+    <img src="README/Result.png" width="1400">
+    <br>
+    <sup><a href="https://www.hackerearth.com/challenges/hackathon/hack-ed-v10/" target="_blank">hack-ed-v10</a></sup>
+</p>
+
