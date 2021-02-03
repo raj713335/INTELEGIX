@@ -1,4 +1,4 @@
-# INTELEGIX (hack-ed-v10) Theme 1 Intelligent Video Monitoring :cinema:
+# INTELEGIX (hack-ed-v1.0) Theme 1 Intelligent Video Monitoring :cinema:
  
  
  <p align="center">
@@ -304,7 +304,7 @@ $ pyinstaller -i "favicon.ico" --onefile -w --hiddenimport=EasyTkinter --hiddeni
 
 
 
-# RESULT INTELEGIX (hack-ed-v10) Theme 1 Intelligent Video Monitoring :cinema:
+# RESULT INTELEGIX (hack-ed-v1.0) Theme 1 Intelligent Video Monitoring :cinema:
  
  
  <p align="center">
