@@ -262,7 +262,7 @@ $ cd INTELEGIX
 - Delete the current Data folder inside INTELEGIX folder and then download the Data.zip from the given url and extract and copy the data folder in INTELEGIX folder
 
 ```sh
-$ wget https://drive.google.com/uc?id=1YnA1wmaBoD3MPLEUWmZoUsvCsySB5Ng2&export=download
+$ wget https://drive.google.com/uc?export=download&confirm=8oGL&id=1fvrGNxotZB7VqJgND9La4a_Ki758GN2o
 ```
 
 - Install Python 3.7.3 and its required Packages like tensorflow etc.
